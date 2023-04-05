@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33513.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent Launcher", "Fluent Launcher\Fluent Launcher.csproj", "{A673EF13-ACF9-4C26-842E-EBC92506581B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent Launcher Tests", "Fluent Launcher Tests\Fluent Launcher Tests.csproj", "{0ED99629-AB73-4F22-A060-59FF637FD7D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A673EF13-ACF9-4C26-842E-EBC92506581B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A673EF13-ACF9-4C26-842E-EBC92506581B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A673EF13-ACF9-4C26-842E-EBC92506581B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A673EF13-ACF9-4C26-842E-EBC92506581B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED99629-AB73-4F22-A060-59FF637FD7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED99629-AB73-4F22-A060-59FF637FD7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED99629-AB73-4F22-A060-59FF637FD7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED99629-AB73-4F22-A060-59FF637FD7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FED0E012-2E15-4C78-AE30-CE2D46A4FF8F}
+	EndGlobalSection
+EndGlobal
