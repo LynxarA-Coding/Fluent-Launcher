@@ -6,7 +6,7 @@ namespace Fluent_Launcher_Tests
     {
         [Fact]
         // Check the logic of the Main Installation function
-        public void MainInstallation()
+        public void MainSkinInstallationTest()
         {
             var _Installation = new Installation();
             string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -37,7 +37,7 @@ namespace Fluent_Launcher_Tests
 
         [Fact]
         // Check the logic of the Install function
-        public void Install()
+        public void InstallFunctionTest()
         {
             var _Installation = new Installation();
             string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -69,7 +69,7 @@ namespace Fluent_Launcher_Tests
 
         [Fact]
         // Check the logic of the Uninstall function
-        public void Uninstall()
+        public void UninstallFunctionTest()
         {
             var _Installation = new Installation();
             string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

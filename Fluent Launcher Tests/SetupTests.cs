@@ -6,7 +6,7 @@ namespace Fluent_Launcher_Tests
     {
         [Fact]
         // check if Steam folder is valid 
-        public void FolderValid()
+        public void FolderValidTest()
         {
             var _Setup = new Setup();
             string path = "C:/Program Files (x86)/Steam";
@@ -17,7 +17,7 @@ namespace Fluent_Launcher_Tests
 
         [Fact]
         // Check if Steam folder is not valid
-        public void FolderNotValid()
+        public void FolderNotValidTest()
         {
             var _Setup = new Setup();
             string path = "C:/Program Files (x86)/test";
