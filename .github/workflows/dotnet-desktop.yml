@@ -17,7 +17,6 @@ jobs:
 
     - name: Build solution
       run: |
-        cd path/to/solution
         msbuild /p:Configuration=Release
 
     - name: Restore NuGet packages
