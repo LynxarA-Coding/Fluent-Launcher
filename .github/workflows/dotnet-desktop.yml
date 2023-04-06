@@ -1,23 +1,22 @@
-name: Build and Test
-on: [push]
+name: Test
+
+on: [push, pull_request]
+
 jobs:
-  build-and-test:
+  test:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 5.0.102
-    - name: Restore Dependencies
-      run: dotnet restore
-    - name: Build Solution
-      run: dotnet build --configuration Release
-    - name: Run Tests
-      run: dotnet test --logger "trx;LogFileName=test_results.xml" /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=TestResults/coverage/
-    - name: Upload Test Results
+        dotnet-version: 6.0.100-preview.3.21202.5
+    - name: Build solution
+      run: msbuild /p:Configuration=Release
+    - name: Run tests
+      run: dotnet test YourProjectName.Tests/YourProjectName.Tests.csproj --logger "trx;LogFileName=test_results.xml" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+    - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        fail_ci_if_error: true
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./TestResults/coverage/**/*.xml
+        files: ./YourProjectName.Tests/coverage.opencover.xml
