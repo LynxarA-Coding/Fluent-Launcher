@@ -21,7 +21,7 @@ jobs:
         msbuild /p:Configuration=Release
 
     - name: Restore NuGet packages
-      run: dotnet restore path/to/solution
+      run: dotnet restore
 
     - name: Build WinForms application
       run: dotnet build path/to/solution/MyWinFormsApp.csproj --configuration Release
