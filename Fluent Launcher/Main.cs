@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Fluent_Launcher.BackgroundClasses;
 using System.Windows.Forms;
 using System.Diagnostics;
@@ -26,9 +20,10 @@ namespace Fluent_Launcher
             Application.Exit();
         }
 
-        private bool _isSteamFolderValid = false; // true if Steam folder is valid, false if not
-        private Setup _Setup = new Setup(); // Setup class instance
-        private string versionName; // Version name of the skin to use in directory paths 
+        private bool _isSteamFolderValid; // true if Steam folder is valid, false if not
+        private bool _isPatched; // true if patched, false if not
+        private Setup _setup = new Setup(); // Setup class instance
+        private string versionName; // Version name of the skin to use in directory path
 
         // Select Folder button
         private void btnFolderSelect_Click(object sender, EventArgs e)
@@ -42,7 +37,7 @@ namespace Fluent_Launcher
             tbFolder.Text = url;
 
             // check if the selected folder is valid
-            if (!_Setup.IsSteamFolderValid(url))
+            if (!_setup.IsSteamFolderValid(url))
             {
                 // if not, do not allow installation
                 tbFolder.Text = string.Empty;
@@ -56,7 +51,7 @@ namespace Fluent_Launcher
         }
 
         // These events are used to make the checkboxes work as radio buttons (only 1 can be toggled true)
-        // This button toggles USername button option for the installation
+        // This button toggles Username button option for the installation
         private void cbUsernameButton_CheckedChanged(object sender, EventArgs e)
         {
             if (cbButtonUsername.Checked)
@@ -119,6 +114,53 @@ namespace Fluent_Launcher
             }
         }
 
+        // This button toggles Extra Library option for the installation
+        private void cbExtraLibrary_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!_isPatched && cbExtraLibrary.Checked)
+            {
+                MessageBox.Show("You need to patch the Friend List first! Download an app and press \"Patch\" inside. The link was copied to the clipboard", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clipboard.SetText("https://github.com/PhantomGamers/SFP");
+                cbExtraLibrary.Checked = false;
+            }
+        }
+
+        // This button toggles Extra Friends option for the installation
+        private void cbExtraFriends_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!_isPatched && cbExtraFriends.Checked)
+            {
+                MessageBox.Show("You need to patch the Friend List first! Download an app and press \"Patch\" inside. The link was copied to the clipboard", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clipboard.SetText("https://github.com/PhantomGamers/SFP");
+                cbExtraFriends.Checked = false;
+            }
+        }
+
+        // This button toggles Patch Confirmation
+        private void cbSFPPatched_CheckedChanged(object sender, EventArgs e)
+        {
+            _isPatched = cbSFPPatched.Checked;
+            cbExtraLibrary.Enabled = cbSFPPatched.Checked;
+            cbExtraFriends.Enabled = cbSFPPatched.Checked;
+
+            // If SFP is not patched, uncheck the Extra Library and Extra Friends checkboxes
+            if (!cbSFPPatched.Checked)
+            {
+                cbExtraLibrary.Checked = false;
+                cbExtraFriends.Checked = false;
+            }
+        }
+
+        // Click on text event to send user to the website of SFP
+        private void lblExtra_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you want to open the link to the SFP website?", "SFP Website", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Process.Start("https://github.com/PhantomGamers/SFP");
+            }
+        }
+
         // Install button event
         private void btnInstall_Click(object sender, EventArgs e)
         {
@@ -130,7 +172,7 @@ namespace Fluent_Launcher
             }
 
             // If prequisites are not met, show error message and stop installation
-            if (!_Setup.PrequisitesCheck())
+            if (!_setup.PrequisitesCheck())
             {
                 MessageBox.Show("There are no files for the Fluent installation. Please, download the program again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -198,11 +240,33 @@ namespace Fluent_Launcher
                 installation.Install($"{mainDir}/Files/Options/Overlay Options", $"{tbFolder.Text}/skins/{versionName}");
             }
 
+            // Extra options check
+            // Dark Library option
+            if (cbExtraLibrary.Checked && cbSFPPatched.Checked)
+            {
+                // install Extra Library
+                installation.Install($"{mainDir}/Files/Options/Extra/Library", $"{tbFolder.Text}/steamui");
+            }
+            // Dark Friends option
+            if (cbExtraFriends.Checked && cbSFPPatched.Checked)
+            {
+                // install Extra Friends
+                installation.Install($"{mainDir}/Files/Options/Extra/Friends", $"{tbFolder.Text}/clientui");
+            }
+
             // Enable install button back
             btnInstall.Text = "INSTALL";
             btnInstall.Enabled = true;
 
-            MessageBox.Show("Fluent For Steam has been installed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Final message depending on the extra installation options
+            if (!_isPatched && (cbExtraLibrary.Checked || cbExtraFriends.Checked))
+            {
+                MessageBox.Show("Fluent For Steam has been installed successfully! However, the Extra options were skipped due to unchecked Patch", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Fluent For Steam has been installed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         // Uninstall button event
@@ -257,6 +321,16 @@ namespace Fluent_Launcher
             if (!isSteamLaunched)
             {
                 Process.Start($"{tbFolder.Text}/steam.exe");
+            }
+        }
+
+        // Copyright text click event
+        private void lblCopyright_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you want to open the link to the LynxarA's Github profile?", "My Profile", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Process.Start("https://github.com/LynxarA-Coding");
             }
         }
     }

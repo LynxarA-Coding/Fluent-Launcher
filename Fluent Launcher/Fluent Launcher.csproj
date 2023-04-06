@@ -38,6 +38,12 @@
   <PropertyGroup>
     <ApplicationIcon>fleuntuserdiscord.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Costura, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.5.7.0\lib\netstandard1.0\Costura.dll</HintPath>

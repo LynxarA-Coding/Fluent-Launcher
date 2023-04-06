@@ -52,6 +52,11 @@
             this.lblOverlay = new System.Windows.Forms.Label();
             this.btnUninstall = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnOpenSteam = new Guna.UI2.WinForms.Guna2TileButton();
+            this.lblExtra = new System.Windows.Forms.Label();
+            this.cbExtraLibrary = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbSFPPatched = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbExtraFriends = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.lblCopyright = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -177,7 +182,7 @@
             this.cbButtonDefault.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
             this.cbButtonDefault.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbButtonDefault.ForeColor = System.Drawing.Color.White;
-            this.cbButtonDefault.Location = new System.Drawing.Point(9, 184);
+            this.cbButtonDefault.Location = new System.Drawing.Point(9, 169);
             this.cbButtonDefault.Name = "cbButtonDefault";
             this.cbButtonDefault.Size = new System.Drawing.Size(168, 30);
             this.cbButtonDefault.TabIndex = 3;
@@ -198,7 +203,7 @@
             this.cbButtonUsername.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
             this.cbButtonUsername.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbButtonUsername.ForeColor = System.Drawing.Color.White;
-            this.cbButtonUsername.Location = new System.Drawing.Point(9, 220);
+            this.cbButtonUsername.Location = new System.Drawing.Point(9, 205);
             this.cbButtonUsername.Name = "cbButtonUsername";
             this.cbButtonUsername.Size = new System.Drawing.Size(197, 30);
             this.cbButtonUsername.TabIndex = 4;
@@ -215,7 +220,7 @@
             this.lblButton.AutoSize = true;
             this.lblButton.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblButton.ForeColor = System.Drawing.Color.White;
-            this.lblButton.Location = new System.Drawing.Point(3, 139);
+            this.lblButton.Location = new System.Drawing.Point(3, 124);
             this.lblButton.Name = "lblButton";
             this.lblButton.Size = new System.Drawing.Size(187, 33);
             this.lblButton.TabIndex = 5;
@@ -226,7 +231,7 @@
             this.lblLayout.AutoSize = true;
             this.lblLayout.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLayout.ForeColor = System.Drawing.Color.White;
-            this.lblLayout.Location = new System.Drawing.Point(3, 257);
+            this.lblLayout.Location = new System.Drawing.Point(3, 242);
             this.lblLayout.Name = "lblLayout";
             this.lblLayout.Size = new System.Drawing.Size(90, 33);
             this.lblLayout.TabIndex = 5;
@@ -235,15 +240,13 @@
             // cbLayoutCompact
             // 
             this.cbLayoutCompact.AutoSize = true;
-            this.cbLayoutCompact.Checked = true;
             this.cbLayoutCompact.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
             this.cbLayoutCompact.CheckedState.BorderRadius = 2;
             this.cbLayoutCompact.CheckedState.BorderThickness = 0;
             this.cbLayoutCompact.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
-            this.cbLayoutCompact.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbLayoutCompact.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLayoutCompact.ForeColor = System.Drawing.Color.White;
-            this.cbLayoutCompact.Location = new System.Drawing.Point(9, 302);
+            this.cbLayoutCompact.Location = new System.Drawing.Point(9, 287);
             this.cbLayoutCompact.Name = "cbLayoutCompact";
             this.cbLayoutCompact.Size = new System.Drawing.Size(107, 30);
             this.cbLayoutCompact.TabIndex = 5;
@@ -264,7 +267,7 @@
             this.cbLayoutEssentials.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
             this.cbLayoutEssentials.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLayoutEssentials.ForeColor = System.Drawing.Color.White;
-            this.cbLayoutEssentials.Location = new System.Drawing.Point(9, 338);
+            this.cbLayoutEssentials.Location = new System.Drawing.Point(9, 323);
             this.cbLayoutEssentials.Name = "cbLayoutEssentials";
             this.cbLayoutEssentials.Size = new System.Drawing.Size(113, 30);
             this.cbLayoutEssentials.TabIndex = 6;
@@ -285,7 +288,7 @@
             this.cbLayoutEssentialsAlt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
             this.cbLayoutEssentialsAlt.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLayoutEssentialsAlt.ForeColor = System.Drawing.Color.White;
-            this.cbLayoutEssentialsAlt.Location = new System.Drawing.Point(9, 374);
+            this.cbLayoutEssentialsAlt.Location = new System.Drawing.Point(9, 359);
             this.cbLayoutEssentialsAlt.Name = "cbLayoutEssentialsAlt";
             this.cbLayoutEssentialsAlt.Size = new System.Drawing.Size(211, 30);
             this.cbLayoutEssentialsAlt.TabIndex = 7;
@@ -306,7 +309,7 @@
             this.cbLayoutSidebar.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
             this.cbLayoutSidebar.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLayoutSidebar.ForeColor = System.Drawing.Color.White;
-            this.cbLayoutSidebar.Location = new System.Drawing.Point(9, 410);
+            this.cbLayoutSidebar.Location = new System.Drawing.Point(9, 395);
             this.cbLayoutSidebar.Name = "cbLayoutSidebar";
             this.cbLayoutSidebar.Size = new System.Drawing.Size(95, 30);
             this.cbLayoutSidebar.TabIndex = 8;
@@ -345,7 +348,7 @@
             this.cbOverlay.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
             this.cbOverlay.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbOverlay.ForeColor = System.Drawing.Color.White;
-            this.cbOverlay.Location = new System.Drawing.Point(273, 184);
+            this.cbOverlay.Location = new System.Drawing.Point(273, 169);
             this.cbOverlay.Name = "cbOverlay";
             this.cbOverlay.Size = new System.Drawing.Size(96, 30);
             this.cbOverlay.TabIndex = 9;
@@ -361,7 +364,7 @@
             this.lblOverlay.AutoSize = true;
             this.lblOverlay.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOverlay.ForeColor = System.Drawing.Color.White;
-            this.lblOverlay.Location = new System.Drawing.Point(267, 139);
+            this.lblOverlay.Location = new System.Drawing.Point(267, 124);
             this.lblOverlay.Name = "lblOverlay";
             this.lblOverlay.Size = new System.Drawing.Size(194, 33);
             this.lblOverlay.TabIndex = 10;
@@ -395,19 +398,112 @@
             this.btnOpenSteam.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenSteam.ForeColor = System.Drawing.Color.Black;
             this.btnOpenSteam.HoverState.Parent = this.btnOpenSteam;
-            this.btnOpenSteam.Location = new System.Drawing.Point(505, 257);
+            this.btnOpenSteam.Location = new System.Drawing.Point(505, 169);
             this.btnOpenSteam.Name = "btnOpenSteam";
             this.btnOpenSteam.ShadowDecoration.Parent = this.btnOpenSteam;
-            this.btnOpenSteam.Size = new System.Drawing.Size(283, 35);
+            this.btnOpenSteam.Size = new System.Drawing.Size(283, 121);
             this.btnOpenSteam.TabIndex = 12;
             this.btnOpenSteam.Text = "OPEN STEAM";
             this.btnOpenSteam.Click += new System.EventHandler(this.btnOpenSteam_Click);
+            // 
+            // lblExtra
+            // 
+            this.lblExtra.AutoSize = true;
+            this.lblExtra.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExtra.ForeColor = System.Drawing.Color.White;
+            this.lblExtra.Location = new System.Drawing.Point(267, 242);
+            this.lblExtra.Name = "lblExtra";
+            this.lblExtra.Size = new System.Drawing.Size(232, 33);
+            this.lblExtra.TabIndex = 5;
+            this.lblExtra.Text = "Extra (requires SFP)";
+            this.lblExtra.Click += new System.EventHandler(this.lblExtra_Click);
+            // 
+            // cbExtraLibrary
+            // 
+            this.cbExtraLibrary.AutoSize = true;
+            this.cbExtraLibrary.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbExtraLibrary.CheckedState.BorderRadius = 2;
+            this.cbExtraLibrary.CheckedState.BorderThickness = 0;
+            this.cbExtraLibrary.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbExtraLibrary.Enabled = false;
+            this.cbExtraLibrary.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbExtraLibrary.ForeColor = System.Drawing.Color.White;
+            this.cbExtraLibrary.Location = new System.Drawing.Point(273, 287);
+            this.cbExtraLibrary.Name = "cbExtraLibrary";
+            this.cbExtraLibrary.Size = new System.Drawing.Size(135, 30);
+            this.cbExtraLibrary.TabIndex = 9;
+            this.cbExtraLibrary.Text = "Dark Library";
+            this.cbExtraLibrary.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbExtraLibrary.UncheckedState.BorderRadius = 2;
+            this.cbExtraLibrary.UncheckedState.BorderThickness = 0;
+            this.cbExtraLibrary.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbExtraLibrary.UseVisualStyleBackColor = true;
+            this.cbExtraLibrary.CheckedChanged += new System.EventHandler(this.cbExtraLibrary_CheckedChanged);
+            // 
+            // cbSFPPatched
+            // 
+            this.cbSFPPatched.AutoSize = true;
+            this.cbSFPPatched.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbSFPPatched.CheckedState.BorderRadius = 2;
+            this.cbSFPPatched.CheckedState.BorderThickness = 0;
+            this.cbSFPPatched.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbSFPPatched.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSFPPatched.ForeColor = System.Drawing.Color.White;
+            this.cbSFPPatched.Location = new System.Drawing.Point(505, 129);
+            this.cbSFPPatched.Name = "cbSFPPatched";
+            this.cbSFPPatched.Size = new System.Drawing.Size(238, 30);
+            this.cbSFPPatched.TabIndex = 9;
+            this.cbSFPPatched.Text = "I\'ve already patched SFP";
+            this.cbSFPPatched.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbSFPPatched.UncheckedState.BorderRadius = 2;
+            this.cbSFPPatched.UncheckedState.BorderThickness = 0;
+            this.cbSFPPatched.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbSFPPatched.UseVisualStyleBackColor = true;
+            this.cbSFPPatched.CheckedChanged += new System.EventHandler(this.cbSFPPatched_CheckedChanged);
+            // 
+            // cbExtraFriends
+            // 
+            this.cbExtraFriends.AutoSize = true;
+            this.cbExtraFriends.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbExtraFriends.CheckedState.BorderRadius = 2;
+            this.cbExtraFriends.CheckedState.BorderThickness = 0;
+            this.cbExtraFriends.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbExtraFriends.Enabled = false;
+            this.cbExtraFriends.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbExtraFriends.ForeColor = System.Drawing.Color.White;
+            this.cbExtraFriends.Location = new System.Drawing.Point(273, 323);
+            this.cbExtraFriends.Name = "cbExtraFriends";
+            this.cbExtraFriends.Size = new System.Drawing.Size(164, 30);
+            this.cbExtraFriends.TabIndex = 9;
+            this.cbExtraFriends.Text = "Dark Friend List";
+            this.cbExtraFriends.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbExtraFriends.UncheckedState.BorderRadius = 2;
+            this.cbExtraFriends.UncheckedState.BorderThickness = 0;
+            this.cbExtraFriends.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbExtraFriends.UseVisualStyleBackColor = true;
+            this.cbExtraFriends.CheckedChanged += new System.EventHandler(this.cbExtraFriends_CheckedChanged);
+            // 
+            // lblCopyright
+            // 
+            this.lblCopyright.AutoSize = true;
+            this.lblCopyright.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCopyright.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.lblCopyright.Location = new System.Drawing.Point(6, 426);
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(357, 15);
+            this.lblCopyright.TabIndex = 3;
+            this.lblCopyright.Text = "v1.0.0 Made by LynxarADev (https://github.com/LynxarA-Coding)";
+            this.lblCopyright.Click += new System.EventHandler(this.lblCopyright_Click);
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCopyright);
+            this.Controls.Add(this.cbSFPPatched);
+            this.Controls.Add(this.cbExtraFriends);
+            this.Controls.Add(this.cbExtraLibrary);
             this.Controls.Add(this.cbOverlay);
             this.Controls.Add(this.lblOverlay);
             this.Controls.Add(this.btnUninstall);
@@ -417,6 +513,7 @@
             this.Controls.Add(this.cbLayoutEssentialsAlt);
             this.Controls.Add(this.cbLayoutEssentials);
             this.Controls.Add(this.cbLayoutCompact);
+            this.Controls.Add(this.lblExtra);
             this.Controls.Add(this.lblLayout);
             this.Controls.Add(this.lblButton);
             this.Controls.Add(this.cbButtonUsername);
@@ -463,6 +560,11 @@
         private Guna.UI2.WinForms.Guna2TileButton btnUninstall;
         private Guna.UI2.WinForms.Guna2TileButton btnOpenSteam;
         private System.Windows.Forms.Label lblHeaderDiscl;
+        private System.Windows.Forms.Label lblExtra;
+        private Guna.UI2.WinForms.Guna2CheckBox cbExtraLibrary;
+        private Guna.UI2.WinForms.Guna2CheckBox cbSFPPatched;
+        private Guna.UI2.WinForms.Guna2CheckBox cbExtraFriends;
+        private System.Windows.Forms.Label lblCopyright;
     }
 }
 

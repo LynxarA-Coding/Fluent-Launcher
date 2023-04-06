@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace Fluent_Launcher.BackgroundClasses
 {
@@ -27,7 +21,7 @@ namespace Fluent_Launcher.BackgroundClasses
                 file.CopyTo(destinationFile, overwrite);
             }
 
-            // Copy each subdirectory using recursion
+            // Copy each sub-directory using recursion
             foreach (DirectoryInfo subDir in sourceDirectory.GetDirectories())
             {
                 string destinationSubDir = Path.Combine(destinationDir, subDir.Name);
@@ -84,7 +78,7 @@ namespace Fluent_Launcher.BackgroundClasses
             CopyDirectory(urlFrom, urlTo, true);
         }
 
-        // Universal uninstallation of any module (folder)
+        // Universal uninstall of any module (folder)
         public void Uninstall(string urlFrom)
         {
             DeleteDirectory(urlFrom);
