@@ -8,10 +8,10 @@ namespace Fluent_Launcher_Tests
         // check if Steam folder is valid 
         public void FolderValidTest()
         {
-            var _Setup = new Setup();
+            var setup = new Setup();
             string path = "C:/Program Files (x86)/Steam";
             bool expected = true;
-            bool actual = _Setup.IsSteamFolderValid(path);
+            bool actual = setup.IsSteamFolderValid(path);
             Assert.Equal(expected, actual);
         }
 
@@ -19,10 +19,10 @@ namespace Fluent_Launcher_Tests
         // Check if Steam folder is not valid
         public void FolderNotValidTest()
         {
-            var _Setup = new Setup();
+            var setup = new Setup();
             string path = "C:/Program Files (x86)/test";
             bool expected = false;
-            bool actual = _Setup.IsSteamFolderValid(path);
+            bool actual = setup.IsSteamFolderValid(path);
             Assert.Equal(expected, actual);
         }
     }
