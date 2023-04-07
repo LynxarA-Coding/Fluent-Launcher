@@ -6,7 +6,7 @@ namespace Fluent_Launcher_Tests
     {
         [Fact]
         // check if Steam folder is valid 
-        public void FolderValidTest()
+        public void IsSteamFolderValid_ReturnsTrue_WhenSteamExeExists()
         {
             var setup = new Setup();
             string path = "C:/Program Files (x86)/Steam";
@@ -17,7 +17,7 @@ namespace Fluent_Launcher_Tests
 
         [Fact]
         // Check if Steam folder is not valid
-        public void FolderNotValidTest()
+        public void IsSteamFolderValid_ReturnsFalse_WhenSteamExeDoesNotExist()
         {
             var setup = new Setup();
             string path = "C:/Program Files (x86)/test";

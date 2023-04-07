@@ -5,41 +5,67 @@ namespace Fluent_Launcher_Tests
     public class InstallationTests
     {
         [Fact]
-        // Check the logic of the Main Installation function
-        public void MainSkinInstallationTest()
+        // Check if the function creates the skins folder when it does not exist
+        public void Main_CreatesSkinsFolder_WhenItDoesNotExist()
         {
-            var _Installation = new Installation();
+            // Arrange
+            var instClass = new Installation();
             string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var urlFrom = $"{documentsFolder}/Fluent Launcher Tests/from";
+            var urlTo = $"{documentsFolder}/Fluent Launcher Tests/to";
+            var skinName = "Fluent Launcher";
 
-            // Url from dummy
-            string urlFrom = $"{documentsFolder}/Fluent Launcher Tests/from";
+            // Act
             Directory.CreateDirectory(urlFrom);
-            string file = $"{urlFrom}/test.txt";
-            using (StreamWriter sw = File.CreateText(file))
-            {
-                sw.WriteLine("test");
-            }
+            instClass.Main(urlFrom, urlTo, skinName);
 
-            // Url to dummy
-            string urlTo = $"{documentsFolder}/Fluent Launcher Tests/to";
-            string skinName = "Fluent Launcher";
-            _Installation.Main(urlFrom, urlTo, skinName);
+            bool expected = true;
+            bool actual = Directory.Exists($"{urlTo}/{skinName}");
 
-            // check if there is a folder with the skin name and it has a text file
-            bool actual = File.Exists($"{urlTo}/{skinName}/test.txt");
-
-            // Delete the dummy folders
+            // Cleanup
             Directory.Delete($"{documentsFolder}/Fluent Launcher Tests", true);
 
             // Assert
-            Assert.True(actual, "Main function does not copy the folder contents");
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        // Check if the function deletes the files inside the skins folder before copying the new ones
+        public void Main_DeletesFilesInsideDirectory_BeforeCopyingNewOnes()
+        {
+            // Arrange
+            var instClass = new Installation();
+            string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var urlFrom = $"{documentsFolder}/Fluent Launcher Tests/from";
+            var urlTo = $"{documentsFolder}/Fluent Launcher Tests/to";
+            var skinName = "Fluent Launcher";
+
+            // Create some files in the directory
+            Directory.CreateDirectory(urlFrom);
+            Directory.CreateDirectory(urlTo);
+            StreamWriter sw1 = File.CreateText($"{urlTo}/test1.txt");
+            StreamWriter sw2 = File.CreateText($"{urlTo}/test2.txt");
+            sw1.Close();
+            sw2.Close();
+
+            // Act
+            instClass.Main(urlFrom, urlTo, skinName);
+
+            bool expected = true;
+            bool actual = Directory.GetFiles(urlTo).Length == 0;
+
+            // Cleanup
+            Directory.Delete($"{documentsFolder}/Fluent Launcher Tests", true);
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
         // Check the logic of the Install function
-        public void InstallFunctionTest()
+        public void Install_MovesFilesInsideNewDirectory()
         {
-            var _Installation = new Installation();
+            var installation = new Installation();
             string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
             // Url from dummy
@@ -55,7 +81,7 @@ namespace Fluent_Launcher_Tests
             string urlTo = $"{documentsFolder}/Fluent Launcher Tests/to";
 
             // Test the Install function
-            _Installation.Install(urlFrom, urlTo);
+            installation.Install(urlFrom, urlTo);
 
             // check if there is a folder with the skin name and it has a text file
             bool actual = File.Exists($"{urlTo}/test.txt");
@@ -69,9 +95,9 @@ namespace Fluent_Launcher_Tests
 
         [Fact]
         // Check the logic of the Uninstall function
-        public void UninstallFunctionTest()
+        public void Uninstall_RemovesFilesFromDestinationDirectory()
         {
-            var _Installation = new Installation();
+            var installation = new Installation();
             string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
             // Url from dummy
@@ -84,7 +110,7 @@ namespace Fluent_Launcher_Tests
             }
 
             // Test the Uninstall function
-            _Installation.Uninstall(urlFrom);
+            installation.Uninstall(urlFrom);
 
             // check if there is a folder with the skin name and it has a text file
             bool actual = File.Exists($"{urlFrom}/test.txt");
