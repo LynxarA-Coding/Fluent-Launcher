@@ -4,7 +4,7 @@
 [![VirusTotal](https://img.shields.io/badge/VirusTotal-11%2F70-green)](https://www.virustotal.com/gui/file/c714016de43108ea311f2909eed8dba85f5fa43dfaaeed9e0947fa3aa30abc16/detection)
 [![Download](https://img.shields.io/badge/Download-click%20here-green)](https://github.com/LynxarA-Coding/Fluent-Launcher/releases/tag/v1.0.0) <br> <br>
 ---
-![test](https://i.imgur.com/NNQU76G.png)
+![image](https://i.imgur.com/kvOlXlq.png)
 <br><br>
 ---
  This program is a "Fluent Steam Skin" launcher for easier installation process. Install a Fluent Steam skin by simply choosing what options do you want and clicking "Install". Its THAT simple. All the files used here are the same as the Fluent for Steam public release that can be found in Discord Server.
