@@ -4,37 +4,22 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-and-test:
     runs-on: windows-latest
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.x
-
-      - name: Build Fluent Launcher
-        working-directory: ./Fluent Launcher
-        run: dotnet build --configuration Release
-
-      - name: Build Fluent Launcher Tests
-        working-directory: ./Fluent Launcher Tests
-        run: dotnet build --configuration Release
-
-  test:
-    needs: build
-    runs-on: windows-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.x
-
-      - name: Run Fluent Launcher Tests
-        working-directory: ./Fluent Launcher Tests
-        run: dotnet test --configuration Release
+    - uses: actions/checkout@v2
+    - name: Setup .NET Framework
+      uses: microsoft/setup-msbuild@v1
+      with:
+        net-framework-version: '4.8'
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.100'
+    - name: Restore packages
+      run: dotnet restore
+      working-directory: FluentLauncherTests
+    - name: Build and run tests
+      run: dotnet test
+      working-directory: FluentLauncherTests
