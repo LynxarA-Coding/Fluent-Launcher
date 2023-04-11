@@ -124,5 +124,33 @@ namespace Fluent_Launcher_Tests
             // Assert
             Assert.False(actual, "Uninstall function does not delete the folder contents");
         }
+
+        [Fact]
+        // Check the logic of the Uninstall file function
+        public void UninstallFile_RemovesFileFromDestinationDirectory()
+        {
+            var installation = new Installation();
+            string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            // Url from dummy
+            string urlFrom = $"{documentsFolder}/Fluent Launcher Tests/";
+            Directory.CreateDirectory(urlFrom);
+            string file = $"{urlFrom}/test.txt";
+            using (StreamWriter sw = File.CreateText(file))
+            {
+                sw.WriteLine("test");
+            }
+            // Test the Uninstall function
+            installation.UninstallFile(urlFrom, "test.txt");
+            // check if there is a folder with the skin name and it has a text file
+            bool actual = File.Exists($"{urlFrom}/test.txt");
+            // Delete the dummy folders if exist
+            if (Directory.Exists($"{urlFrom}/"))
+            {
+                Directory.Delete($"{urlFrom}/", true);
+            }
+            // Assert
+            Assert.False(actual, "Uninstall function does not delete the folder contents");
+        }
     }
 }

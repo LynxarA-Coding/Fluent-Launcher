@@ -36,6 +36,12 @@ namespace Fluent_Launcher.BackgroundClasses
                 }
             } 
 
+            // check if SFP exists
+            if (!Directory.Exists($"Files/SFP"))
+            {
+                return false;
+            }
+
             // check if folder has directories in it
             if (Directory.GetDirectories("Files").Length == 0)
             {

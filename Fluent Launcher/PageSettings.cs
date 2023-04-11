@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Guna.UI2.WinForms;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
 
 namespace Fluent_Launcher
 {
@@ -50,6 +51,34 @@ namespace Fluent_Launcher
             cbSFP.Checked = main._isPatched;
         }
 
+        // SFP Launch and guide
+        private void LaunchSFP()
+        {
+            DialogResult result = MessageBox.Show("You need to patch Steam to use this feature. Do you want to patch Steam now? (This action will start SFP app)", "Patch Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Path to the SFP Patcher
+                string sfpPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Files\\SFP\\SFP_UI.exe";
+
+                // Check if SFP is launched already
+                if (Process.GetProcessesByName("SFP_UI").Length == 0)
+                {
+                    // Make a prompt with explanation
+                    MessageBox.Show("1. When app is loaded, click \"Patch\"\n2. Wait for the patch to end\n3. Close Steam if it was opened\n\nClick \"OK\" in this prompt to launch SFP", "SFP Patch Guide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Launch SFP
+                    Process.Start(sfpPath);
+                }
+                else
+                {
+                    // SFP is already launched error
+                    MessageBox.Show("SFP is already launched. Please patch Steam or close SFP and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        // Fired when a checkbox or radiobutton is checked or unchecked
         private void cbCheckedChanged(object sender, EventArgs e)
         {
             // Check if sender is a checkbox or radiobutton
@@ -63,6 +92,7 @@ namespace Fluent_Launcher
                 {
                     main._installOptionsState["Layout:Sidebar"] = cb.Checked;
 
+                    // Check if the checkbox of Compact layout is checked, if not, check it and uncheck the other two
                     if (cb.Checked)
                     {
                         rbLayoutCompact.Checked = cb.Checked;
@@ -76,16 +106,13 @@ namespace Fluent_Launcher
 
                 if (name == "cbExtraLibrary")
                 {
-                    // If not patched, uncheck the checkbox
+                    // If not patched, uncheck the checkbox + launch SFP prompt
                     if (cbExtraLibrary.Checked && !main._isPatched)
                     {
                         cbExtraLibrary.Checked = false;
-                        DialogResult result = MessageBox.Show("You need to patch Steam to use this feature. Do you want to patch Steam now?", "Patch Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                        if (result == DialogResult.Yes)
-                        {
-                            Process.Start("https://github.com/PhantomGamers/SFP");
-                        }
+                        
+                        // Launch SFP prompt
+                        LaunchSFP();
                     }
                     else if (cbExtraLibrary.Checked && main._isPatched)
                     {
@@ -94,16 +121,14 @@ namespace Fluent_Launcher
                 }
                 else if (name == "cbExtraFriends")
                 {
-                    // If not patched, uncheck the checkbox
+                    // If not patched, uncheck the checkbox + launch SFP prompt
                     if (cbExtraFriends.Checked && !main._isPatched)
                     {
                         cbExtraFriends.Checked = false;
-                        DialogResult result = MessageBox.Show("You need to patch Steam to use this feature. Do you want to patch Steam now?", "Patch Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        if (result == DialogResult.Yes)
-                        {
-                            Process.Start("https://github.com/PhantomGamers/SFP");
-                        }
+                        // Launch SFP prompt
+                        LaunchSFP();
+                        
                     }
                     else if (cbExtraFriends.Checked && main._isPatched)
                     {

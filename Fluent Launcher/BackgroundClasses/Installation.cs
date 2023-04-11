@@ -81,7 +81,19 @@ namespace Fluent_Launcher.BackgroundClasses
         // Universal uninstall of any module (folder)
         public void Uninstall(string urlFrom)
         {
-            DeleteDirectory(urlFrom);
+            if (Directory.Exists(urlFrom))
+            {
+                DeleteDirectory(urlFrom);
+            }
+        }
+
+        // Universal uninstall for a file inside a folder
+        public void UninstallFile(string urlFrom, string fileName)
+        {
+            if (File.Exists(urlFrom + $"/{fileName}"))
+            {
+                File.Delete(urlFrom + $"/{fileName}");
+            }
         }
     }
 }

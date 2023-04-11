@@ -38,6 +38,7 @@
             this.btnUninstallNo = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnUninstallYes = new Guna.UI2.WinForms.Guna2TileButton();
             this.lblUninstallPrompt = new System.Windows.Forms.Label();
+            this.lblUninstallDisclaimer = new System.Windows.Forms.Label();
             this.pnlButtons.SuspendLayout();
             this.pnlUninstallPrompt.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +159,7 @@
             this.pnlUninstallPrompt.Controls.Add(this.btnUninstallYes);
             this.pnlUninstallPrompt.Controls.Add(this.lblUninstallPrompt);
             this.pnlUninstallPrompt.Enabled = false;
-            this.pnlUninstallPrompt.Location = new System.Drawing.Point(12, 175);
+            this.pnlUninstallPrompt.Location = new System.Drawing.Point(511, 258);
             this.pnlUninstallPrompt.Name = "pnlUninstallPrompt";
             this.pnlUninstallPrompt.ShadowDecoration.Parent = this.pnlUninstallPrompt;
             this.pnlUninstallPrompt.Size = new System.Drawing.Size(427, 199);
@@ -211,11 +212,24 @@
             this.lblUninstallPrompt.Text = "ARE YOU SURE YOU\r\nWANT TO UNINSTALL?";
             this.lblUninstallPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblUninstallDisclaimer
+            // 
+            this.lblUninstallDisclaimer.AutoSize = true;
+            this.lblUninstallDisclaimer.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUninstallDisclaimer.ForeColor = System.Drawing.Color.White;
+            this.lblUninstallDisclaimer.Location = new System.Drawing.Point(289, 233);
+            this.lblUninstallDisclaimer.Name = "lblUninstallDisclaimer";
+            this.lblUninstallDisclaimer.Size = new System.Drawing.Size(200, 23);
+            this.lblUninstallDisclaimer.TabIndex = 19;
+            this.lblUninstallDisclaimer.Text = "UNINSTALL DISCLAIMER";
+            this.lblUninstallDisclaimer.Click += new System.EventHandler(this.lblUninstallDisclaimer_Click);
+            // 
             // PageMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(780, 333);
+            this.Controls.Add(this.lblUninstallDisclaimer);
             this.Controls.Add(this.pnlUninstallPrompt);
             this.Controls.Add(this.btnFolderSelect);
             this.Controls.Add(this.tbFolder);
@@ -228,6 +242,7 @@
             this.pnlUninstallPrompt.ResumeLayout(false);
             this.pnlUninstallPrompt.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -243,5 +258,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btnUninstallNo;
         private Guna.UI2.WinForms.Guna2TileButton btnUninstallYes;
         private System.Windows.Forms.Label lblUninstallPrompt;
+        private System.Windows.Forms.Label lblUninstallDisclaimer;
     }
 }

@@ -32,6 +32,9 @@ namespace Fluent_Launcher
                 tbFolder.Text = path; // Set the path to the textbox
                 _isSteamFolderValid = true ; // Set the Steam folder as valid
             }
+
+            pnlButtons.Location = new Point((this.Width - pnlButtons.Width) / 2, pnlButtons.Location.Y); // Center the buttons panel
+            lblUninstallDisclaimer.Location = new Point((this.Width - lblUninstallDisclaimer.Width) / 2, lblUninstallDisclaimer.Location.Y); // Center the uninstall disclaimer label
         }
 
         // Select button click event
@@ -209,11 +212,31 @@ namespace Fluent_Launcher
             string mainDir = Path.GetDirectoryName(Application.ExecutablePath);
             versionName = Directory.GetDirectories($"{mainDir}/Files/Main")[0].Split('\\').Last();
 
+
+            // Initializing main for settings check
+            Main main = (Main)this.Owner;
             // uninstall everything from the skin folder
             Installation installation = new Installation();
             installation.Uninstall($"{tbFolder.Text}/skins/{versionName}");
 
-            MessageBox.Show("Fluent For Steam has been uninstalled successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // If SFP is installed, uninstalling dark friends list and library
+            if (main._isPatched)
+            {
+                // Uninstall dark library if exist
+                installation.Uninstall($"{tbFolder.Text}/steamui");
+
+                // Uninstall dark friends list if exist
+                installation.UninstallFile($"{tbFolder.Text}/clientui/", "friends.custom.css");
+                installation.UninstallFile($"{tbFolder.Text}/clientui/", "ofriends.custom.css");
+
+                // Notify the user that skin is uninstalled
+                MessageBox.Show("Fluent For Steam has been uninstalled successfully! Since you have SFP, dark friends and library were uninstalled too (check the uninstall disclaimer)", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Notify the user that skin is uninstalled
+                MessageBox.Show("Fluent For Steam has been uninstalled successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private bool isUninstalling()
@@ -284,6 +307,12 @@ namespace Fluent_Launcher
             // Copying instance of the Main
             Main main = (Main)this.Owner;
             main.ChangePage(1);
+        }
+
+        // Uninstall disclaimer label click event
+        private void lblUninstallDisclaimer_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Uninstall Fluent for Steam will remove the skin from your Steam folder, and will not delete any of your Steam files. However, your SFP patch (if done) will be corrupt if you checked the \"I've already Patched SFP\". If you want to use it - patch again after uninstalling the skin.", "Uninstall Disclaimer", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

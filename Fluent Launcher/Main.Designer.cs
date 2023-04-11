@@ -131,7 +131,7 @@
             this.lblCopyright.Name = "lblCopyright";
             this.lblCopyright.Size = new System.Drawing.Size(119, 30);
             this.lblCopyright.TabIndex = 3;
-            this.lblCopyright.Text = "v1.1.0\r\nMade by LynxarADev";
+            this.lblCopyright.Text = "v1.1.1\r\nMade by LynxarADev";
             this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCopyright.Click += new System.EventHandler(this.lblCopyright_Click);
             // 
