@@ -2,3 +2,5 @@
 .vs/
 bin/
 obj/
+Fluent Launcher Tests/bin/
+Fluent Launcher Tests/obj/
