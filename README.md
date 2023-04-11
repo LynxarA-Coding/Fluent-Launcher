@@ -10,8 +10,8 @@
  This program is a "Fluent Steam Skin" launcher for easier installation process. Install a Fluent Steam skin by simply choosing what options do you want and clicking "Install". Its THAT simple. All the files used here are the same as the Fluent for Steam public release that can be found in Discord Server.
  
 ## Support
-You can donate to the LynxarADev to get code snippets, personal code thoughts or just to support: [Boosty Subscription Link](https://boosty.to/lynxaradev/)
-It will definetely motivate me doing more coding in my free time. Don't worry, this project will be free amd opensource anyway (unless Fluent For Steam devs remove free version)
+You can donate to the LynxarADev to get code snippets, personal code thoughts or just to support: [Boosty Subscription Link](https://boosty.to/lynxaradev/).
+It will definitely motivate me to do more coding in my free time. Don't worry, this project will be free and open source anyway (unless Fluent For Steam devs remove the free version)
 
 ## Official links:
 | Source  | Link |
