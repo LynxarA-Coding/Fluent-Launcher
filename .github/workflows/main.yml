@@ -9,14 +9,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Setup .NET Framework
+
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0
-      - name: Build project
-        run: |
-          cd "Fluent Launcher"
-          dotnet build
+          dotnet-version: 6.0.x
+
+      - name: Build Fluent Launcher
+        working-directory: ./Fluent Launcher
+        run: dotnet build --configuration Release
+
+      - name: Build Fluent Launcher Tests
+        working-directory: ./Fluent Launcher Tests
+        run: dotnet build --configuration Release
 
   test:
     needs: build
@@ -24,17 +29,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Setup .NET Core
+
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0
-      - name: Build and run tests
-        run: |
-          cd "Fluent Launcher Tests"
-          dotnet test --logger trx --results-directory TestResults /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../TestResults/coverage/ /p:Exclude="[xunit.*]*%2c[FluentLauncherTests]*" /p:Threshold=80
-          testResults=$(find . -name '*.trx' -type f -printf "%T@ %p\n" | sort -n | awk '{print $2; exit}')  
-          trx2junit -f -i "$testResults" -o ../TestResults/test-results.xml
-        env:
-          FailOnTestFailures: true
-          coverageThreshold: 80
-        continue-on-error: ${{ !env.FailOnTestFailures }}
+          dotnet-version: 6.0.x
+
+      - name: Run Fluent Launcher Tests
+        working-directory: ./Fluent Launcher Tests
+        run: dotnet test --configuration Release
