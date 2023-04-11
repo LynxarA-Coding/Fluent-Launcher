@@ -9,10 +9,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Framework
-      uses: microsoft/setup-msbuild@v1
-      with:
-        net-framework-version: '4.8'
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v1
       with:
