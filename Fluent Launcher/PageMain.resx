@@ -117,4 +117,313 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;pnlButtons.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblUninstallDisclaimer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 14.25pt, style=Bold, Underline</value>
+  </data>
+  <data name="pnlUninstallPrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>511, 258</value>
+  </data>
+  <data name="lblUninstallDisclaimer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 233</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallYes.Name" xml:space="preserve">
+    <value>btnUninstallYes</value>
+  </data>
+  <data name="&gt;&gt;btnUninstall.Name" xml:space="preserve">
+    <value>btnUninstall</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
+    <value>btnSettings</value>
+  </data>
+  <data name="btnFolderSelect.Text" xml:space="preserve">
+    <value>SELECT</value>
+  </data>
+  <data name="btnUninstall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 77</value>
+  </data>
+  <data name="btnSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="btnInstall.Text" xml:space="preserve">
+    <value>INSTALL</value>
+  </data>
+  <data name="btnUninstallNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 113</value>
+  </data>
+  <data name="lblUninstallDisclaimer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="&gt;&gt;pnlUninstallPrompt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnInstall.Name" xml:space="preserve">
+    <value>btnInstall</value>
+  </data>
+  <data name="&gt;&gt;pnlUninstallPrompt.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="btnInstall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 65</value>
+  </data>
+  <data name="lblUninstallPrompt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;tbFolder.Name" xml:space="preserve">
+    <value>tbFolder</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblUninstallPrompt.Text" xml:space="preserve">
+    <value>ARE YOU SURE YOU
+WANT TO UNINSTALL?</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallDisclaimer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PageMain</value>
+  </data>
+  <data name="pnlButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 79</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlUninstallPrompt.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnUninstallNo.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnUninstall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>364, 65</value>
+  </data>
+  <data name="btnUninstallYes.Text" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="&gt;&gt;btnFolderSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnUninstallYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 65</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallDisclaimer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pnlButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 151</value>
+  </data>
+  <data name="tbFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnUninstall.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pnlButtons.Name" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblUninstallDisclaimer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblUninstallDisclaimer.Text" xml:space="preserve">
+    <value>UNINSTALL DISCLAIMER</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallPrompt.Parent" xml:space="preserve">
+    <value>pnlUninstallPrompt</value>
+  </data>
+  <data name="lblUninstallPrompt.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbFolder.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;btnUninstall.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="tbFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 3</value>
+  </data>
+  <data name="lblUninstallPrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 15</value>
+  </data>
+  <data name="btnInstall.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallNo.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="tbFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>636, 36</value>
+  </data>
+  <data name="&gt;&gt;btnInstall.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="btnFolderSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnUninstallYes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 113</value>
+  </data>
+  <data name="btnFolderSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>641, 3</value>
+  </data>
+  <data name="&gt;&gt;btnInstall.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnFolderSelect.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 18pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnFolderSelect.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnUninstall.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="pnlUninstallPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 199</value>
+  </data>
+  <data name="lblUninstallPrompt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 26.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnFolderSelect.Name" xml:space="preserve">
+    <value>btnFolderSelect</value>
+  </data>
+  <data name="btnUninstallYes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 30pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallYes.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="lblUninstallPrompt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallYes.Parent" xml:space="preserve">
+    <value>pnlUninstallPrompt</value>
+  </data>
+  <data name="&gt;&gt;pnlUninstallPrompt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblUninstallPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 84</value>
+  </data>
+  <data name="&gt;&gt;pnlUninstallPrompt.Name" xml:space="preserve">
+    <value>pnlUninstallPrompt</value>
+  </data>
+  <data name="btnUninstallYes.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="pnlUninstallPrompt.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tbFolder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnInstall.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallYes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="btnInstall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 65</value>
+  </data>
+  <data name="&gt;&gt;pnlButtons.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnUninstallNo.Text" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallPrompt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnUninstall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 30pt, style=Bold</value>
+  </data>
+  <data name="btnUninstall.Text" xml:space="preserve">
+    <value>UNINSTALL</value>
+  </data>
+  <data name="btnInstall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 30pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PageMain</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallPrompt.Name" xml:space="preserve">
+    <value>lblUninstallPrompt</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
+    <value>pnlButtons</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>780, 333</value>
+  </data>
+  <data name="&gt;&gt;tbFolder.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallPrompt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 6</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallNo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallNo.Parent" xml:space="preserve">
+    <value>pnlUninstallPrompt</value>
+  </data>
+  <data name="btnUninstallNo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 30pt, style=Bold</value>
+  </data>
+  <data name="pnlUninstallPrompt.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnFolderSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 36</value>
+  </data>
+  <data name="&gt;&gt;btnFolderSelect.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnUninstallNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 65</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallDisclaimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUninstallDisclaimer.Name" xml:space="preserve">
+    <value>lblUninstallDisclaimer</value>
+  </data>
+  <data name="&gt;&gt;btnUninstallNo.Name" xml:space="preserve">
+    <value>btnUninstallNo</value>
+  </data>
+  <data name="&gt;&gt;pnlButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblUninstallDisclaimer.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;btnUninstall.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

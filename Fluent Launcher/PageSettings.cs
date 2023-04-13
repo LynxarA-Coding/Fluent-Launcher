@@ -4,6 +4,9 @@ using Guna.UI2.WinForms;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
+using System.ComponentModel;
+using System.Globalization;
+using System.Threading;
 
 namespace Fluent_Launcher
 {
@@ -14,13 +17,65 @@ namespace Fluent_Launcher
             InitializeComponent();
         }
 
+        /*
+        [ MAIN METHOD ]
+        */
         private void PageSettings_Load(object sender, EventArgs e)
         {
+            // UI Updater
+            UpdateUI();
             pnlPatch.Location = new Point((this.Width - pnlPatch.Width) / 2, pnlPatch.Location.Y);
             cbSFP.Location = new Point((pnlPatch.Width - cbSFP.Width) / 2, cbSFP.Location.Y);
             LoadSettings();
         }
 
+        /*
+        [ Language Setters ]
+        */
+
+        // UI Updater
+        public void UpdateUI()
+        {
+            // Initializing component and resources
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageSettings));
+
+            // Getting culture info
+            Main main = (Main)this.Owner;
+            CultureInfo culture = main._currentCulture;
+
+            // Changing the language
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
+            resources.ApplyResources(this, "$this", culture);
+
+            // Updating the UI
+            lblPageTitle.Text = resources.GetString("lblPageTitle.Text");
+            btnBack.Text = resources.GetString("btnBack.Text");
+            lblButtonsTitle.Text = resources.GetString("lblButtonsTitle.Text");
+            lblLayoutTitle.Text = resources.GetString("lblLayoutTitle.Text");
+            lblOverlayTitle.Text = resources.GetString("lblOverlayTitle.Text");
+            lblExtraTitle.Text = resources.GetString("lblExtraTitle.Text");
+            cbSFP.Text = resources.GetString("cbSFP.Text");
+            cbSFP.Location = new Point((pnlPatch.Width - cbSFP.Width) / 2, cbSFP.Location.Y);
+            rbButtonDefault.Text = resources.GetString("rbButtonDefault.Text");
+            rbButtonUsername.Text = resources.GetString("rbButtonUsername.Text");
+            cbLayoutSidebar.Text = resources.GetString("cbLayoutSidebar.Text");
+            rbLayoutCompact.Text = resources.GetString("rbLayoutCompact.Text");
+            rbLayoutEssentials.Text = resources.GetString("rbLayoutEssentials.Text");
+            rbLayoutEssentialsAlt.Text = resources.GetString("rbLayoutEssentialsAlt.Text");
+            rbOverlayTop.Text = resources.GetString("rbOverlayTop.Text");
+            rbOverlayBottom.Text = resources.GetString("rbOverlayBottom.Text");
+            rbOverlayLeftAlign.Text = resources.GetString("rbOverlayLeftAlign.Text");
+            rbOverlayLeftBar.Text = resources.GetString("rbOverlayLeftBar.Text");
+            cbExtraLibrary.Text = resources.GetString("cbExtraLibrary.Text");
+            cbExtraFriends.Text = resources.GetString("cbExtraFriends.Text");
+        }
+
+        /*
+        [ Options Events ]
+        */
+
+        // Setting the Options states
         private void LoadSettings()
         {
             // Copying the instance of the main form
@@ -54,7 +109,18 @@ namespace Fluent_Launcher
         // SFP Launch and guide
         private void LaunchSFP()
         {
-            DialogResult result = MessageBox.Show("You need to patch Steam to use this feature. Do you want to patch Steam now? (This action will start SFP app)", "Patch Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Main main = (Main)Owner;
+            CultureInfo culture = main._currentCulture;
+
+            DialogResult result = DialogResult.None;
+            if (culture.Name == "ru-RU")
+            {
+                result = MessageBox.Show("Для использования этой функции необходимо пропатчить Steam. Вы хотите пропатчить Steam сейчас? (Это действие запустит SFP)", "Пропатчить Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+            else
+            {
+                result = MessageBox.Show("You need to patch Steam to use this feature. Do you want to patch Steam now? (This action will start SFP app)", "Patch Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
 
             if (result == DialogResult.Yes)
             {
@@ -65,7 +131,14 @@ namespace Fluent_Launcher
                 if (Process.GetProcessesByName("SFP_UI").Length == 0)
                 {
                     // Make a prompt with explanation
-                    MessageBox.Show("1. When app is loaded, click \"Patch\"\n2. Wait for the patch to end\n3. Close Steam if it was opened\n\nClick \"OK\" in this prompt to launch SFP", "SFP Patch Guide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (culture.Name == "ru-RU")
+                    {
+                        MessageBox.Show("1. После запуска приложения нажмите \"Patch\"\n2. Дождитесь окончания патча\n3. Закройте Steam, если он был запущен\n\nНажмите \"OK\" в этом окне, чтобы запустить SFP", "Инструкция по пропатчиванию Steam", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("1. When app is loaded, click \"Patch\"\n2. Wait for the patch to end\n3. Close Steam if it was opened\n\nClick \"OK\" in this prompt to launch SFP", "SFP Patch Guide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
                     // Launch SFP
                     Process.Start(sfpPath);
@@ -73,7 +146,14 @@ namespace Fluent_Launcher
                 else
                 {
                     // SFP is already launched error
-                    MessageBox.Show("SFP is already launched. Please patch Steam or close SFP and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (culture.Name == "ru-RU")
+                    {
+                        MessageBox.Show("SFP уже запущен. Пожалуйста, пропатчьте Steam или закройте SFP и попробуйте снова.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("SFP is already launched. Please patch Steam or close SFP and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -205,6 +285,10 @@ namespace Fluent_Launcher
             }
         }
 
+        /*
+        [ UI Events ]
+        */
+
         // Back button click event
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -226,6 +310,7 @@ namespace Fluent_Launcher
 
         private void cbSFP_CheckedChanged(object sender, EventArgs e)
         {
+            // Copying the instance of the main form to access the _isPatched variable
             Main main = (Main)Owner;
             main._isPatched = cbSFP.Checked;
         }

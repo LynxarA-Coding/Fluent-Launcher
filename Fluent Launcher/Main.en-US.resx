@@ -118,474 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cbLanguage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 14.25pt, style=Bold</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cbLanguage.ItemHeight" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="cbLanguage.Items" xml:space="preserve">
-    <value>EN</value>
-  </data>
-  <data name="cbLanguage.Items1" xml:space="preserve">
-    <value>RU</value>
-  </data>
   <data name="cbLanguage.Location" type="System.Drawing.Point, System.Drawing">
     <value>659, 13</value>
   </data>
   <data name="cbLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 36</value>
-  </data>
-  <data name="cbLanguage.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;cbLanguage.Name" xml:space="preserve">
-    <value>cbLanguage</value>
-  </data>
-  <data name="&gt;&gt;cbLanguage.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;cbLanguage.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;cbLanguage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
-  </data>
-  <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
+    <value>80, 36</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="pbLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="pbLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="lblHeaderDiscl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
-    <value>pbLogo</value>
+  <data name="lblHeader.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;pbLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblHeaderDiscl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblHeaderDiscl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 8.25pt</value>
-  </data>
-  <data name="lblHeaderDiscl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 37</value>
-  </data>
-  <data name="lblHeaderDiscl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
-  </data>
-  <data name="lblHeaderDiscl.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblHeaderDiscl.Text" xml:space="preserve">
-    <value>This program is not an official "Fluent for Steam" Launcher. 
-Be advised, it may have critical bugs</value>
-  </data>
-  <data name="lblHeaderDiscl.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblHeaderDiscl.Name" xml:space="preserve">
-    <value>lblHeaderDiscl</value>
-  </data>
-  <data name="&gt;&gt;lblHeaderDiscl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblHeaderDiscl.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;lblHeaderDiscl.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblHeader.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblHeader.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 24pt, style=Bold</value>
-  </data>
-  <data name="lblHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 3</value>
-  </data>
-  <data name="lblHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 39</value>
-  </data>
-  <data name="lblHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblHeader.Text" xml:space="preserve">
-    <value>FLUENT LAUNCHER</value>
-  </data>
-  <data name="&gt;&gt;lblHeader.Name" xml:space="preserve">
-    <value>lblHeader</value>
-  </data>
-  <data name="&gt;&gt;lblHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblHeader.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;lblHeader.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>750, 10</value>
-  </data>
-  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="btnClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
-    <value>btnClose</value>
-  </data>
-  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="pnlHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 74</value>
-  </data>
-  <data name="pnlHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Name" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlHeader.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="DragControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="elpsMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>136, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en-US</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
-  </data>
-  <data name="pbAboutLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 78</value>
-  </data>
-  <data name="pbAboutLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 60</value>
-  </data>
-  <data name="pbAboutLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pbAboutLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;pbAboutLogo.Name" xml:space="preserve">
-    <value>pbAboutLogo</value>
-  </data>
-  <data name="&gt;&gt;pbAboutLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbAboutLogo.Parent" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;pbAboutLogo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblAboutOpurojo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAboutOpurojo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 27.75pt, style=Bold</value>
-  </data>
-  <data name="lblAboutOpurojo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 165</value>
-  </data>
-  <data name="lblAboutOpurojo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 45</value>
-  </data>
-  <data name="lblAboutOpurojo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblAboutOpurojo.Text" xml:space="preserve">
-    <value>opurojogo</value>
-  </data>
-  <data name="&gt;&gt;lblAboutOpurojo.Name" xml:space="preserve">
-    <value>lblAboutOpurojo</value>
-  </data>
-  <data name="&gt;&gt;lblAboutOpurojo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAboutOpurojo.Parent" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;lblAboutOpurojo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblAboutLink.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAboutLink.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 9.75pt</value>
-  </data>
-  <data name="lblAboutLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 212</value>
-  </data>
-  <data name="lblAboutLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 15</value>
-  </data>
-  <data name="lblAboutLink.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblAboutLink.Text" xml:space="preserve">
-    <value>https://github.com/LynxarA-Coding/Fluent-Launcher</value>
-  </data>
-  <data name="lblAboutLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLink.Name" xml:space="preserve">
-    <value>lblAboutLink</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLink.Parent" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLink.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnAboutClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 8</value>
-  </data>
-  <data name="btnAboutClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="btnAboutClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="btnAboutClose.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnAboutClose.Name" xml:space="preserve">
-    <value>btnAboutClose</value>
-  </data>
-  <data name="&gt;&gt;btnAboutClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAboutClose.Parent" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;btnAboutClose.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblAboutLynxara.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAboutLynxara.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 27.75pt, style=Bold</value>
-  </data>
-  <data name="lblAboutLynxara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 35</value>
-  </data>
-  <data name="lblAboutLynxara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 45</value>
-  </data>
-  <data name="lblAboutLynxara.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblAboutLynxara.Text" xml:space="preserve">
-    <value>LynxarADev</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLynxara.Name" xml:space="preserve">
-    <value>lblAboutLynxara</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLynxara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLynxara.Parent" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;lblAboutLynxara.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblAboutDesignedby.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAboutDesignedby.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 20.25pt</value>
-  </data>
-  <data name="lblAboutDesignedby.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 134</value>
-  </data>
-  <data name="lblAboutDesignedby.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 33</value>
-  </data>
-  <data name="lblAboutDesignedby.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAboutDesignedby.Text" xml:space="preserve">
-    <value>Fluent for Steam designed by</value>
-  </data>
-  <data name="&gt;&gt;lblAboutDesignedby.Name" xml:space="preserve">
-    <value>lblAboutDesignedby</value>
-  </data>
-  <data name="&gt;&gt;lblAboutDesignedby.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAboutDesignedby.Parent" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;lblAboutDesignedby.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblAboutMadeby.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAboutMadeby.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 20.25pt</value>
-  </data>
-  <data name="lblAboutMadeby.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 4</value>
-  </data>
-  <data name="lblAboutMadeby.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 33</value>
-  </data>
-  <data name="lblAboutMadeby.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAboutMadeby.Text" xml:space="preserve">
-    <value>This project is made by</value>
-  </data>
-  <data name="&gt;&gt;lblAboutMadeby.Name" xml:space="preserve">
-    <value>lblAboutMadeby</value>
-  </data>
-  <data name="&gt;&gt;lblAboutMadeby.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAboutMadeby.Parent" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;lblAboutMadeby.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="pnlAbout.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="btnClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 419</value>
+    <value>27, 430</value>
   </data>
-  <data name="pnlAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>506, 236</value>
-  </data>
-  <data name="pnlAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="pnlAbout.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Name" xml:space="preserve">
-    <value>pnlAbout</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlAbout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblCopyright.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCopyright.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 9.75pt</value>
-  </data>
-  <data name="lblCopyright.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 416</value>
-  </data>
-  <data name="lblCopyright.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 30</value>
-  </data>
-  <data name="lblCopyright.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="lblCopyright.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblCopyright.Text" xml:space="preserve">
     <value>v1.1.2
 Made by LynxarADev</value>
-  </data>
-  <data name="lblCopyright.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblCopyright.Name" xml:space="preserve">
-    <value>lblCopyright</value>
-  </data>
-  <data name="&gt;&gt;lblCopyright.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCopyright.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblCopyright.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 80</value>
-  </data>
-  <data name="pnlPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>780, 333</value>
-  </data>
-  <data name="pnlPage.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;pnlPage.Name" xml:space="preserve">
-    <value>pnlPage</value>
-  </data>
-  <data name="&gt;&gt;pnlPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlPage.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlPage.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -767,28 +327,25 @@ Made by LynxarADev</value>
         Y5gAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="pbAboutLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Main</value>
+  <data name="lblAboutOpurojo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;DragControl.Name" xml:space="preserve">
-    <value>DragControl</value>
+  <data name="lblAboutLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;DragControl.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DragControl, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="btnAboutClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;elpsMain.Name" xml:space="preserve">
-    <value>elpsMain</value>
+  <data name="lblAboutLynxara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;elpsMain.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Elipse, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="lblAboutDesignedby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Main</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblAboutMadeby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Drawing;
+using System.Net.NetworkInformation;
+using static Guna.UI2.HtmlRenderer.Adapters.RGraphicsPath;
+using System.Net;
+using System.Xml.Linq;
+using Fluent_Launcher.BackgroundClasses;
+using System.Threading;
+using System.Globalization;
+using System.ComponentModel;
+using Fluent_Launcher.Properties;
 
 namespace Fluent_Launcher
 {
@@ -23,12 +32,115 @@ namespace Fluent_Launcher
         };
 
         /*
+        [ MAIN METHOD ]
+        */
+
+        private readonly string appVersion = "v1.1.2"; // Current App version
+        private void Main_Load(object sender, EventArgs e)
+        {
+            if (!_setup.VersionCheck(appVersion))
+            {
+                pnlPage.Enabled = false;
+                pnlPage.Visible = false;
+                return;
+            }
+
+            // Restore settings
+            string language = Settings.Default["Language"].ToString();
+            _currentCulture = new CultureInfo(language);
+            if (language == "ru-RU")
+            {
+                cbLanguage.SelectedIndex = 1;
+            }
+            else
+            {
+                cbLanguage.SelectedIndex = 0;
+            }
+
+            // Initialize the options state
+            _installOptionsState = new Dictionary<string, bool>();
+            foreach (var group in _installOptions.Keys)
+            {
+                foreach (var option in _installOptions[group])
+                {
+                    _installOptionsState.Add($"{group}:{option}", false);
+                }
+            }
+
+            // Center elements
+            lblCopyright.Location = new Point((this.Width - lblCopyright.Width) / 2, lblCopyright.Location.Y);
+
+            ChangePage(0);
+        }
+
+        /*
         [ All Initializers ]
         */
-        
+
+        private Setup _setup = new Setup(); // Setup class
         public Dictionary<string, bool> _installOptionsState = new Dictionary<string, bool>(); // State of the options
         public string _installPath = ""; // Path to Steam (saved)
         public bool _isPatched = false; // Is the Steam patched?
+
+        /*
+        [ Language Setters ]
+        */
+
+        public CultureInfo _currentCulture = Thread.CurrentThread.CurrentCulture; // Current language
+        // Language update method
+        private void UpdateUI(string lang)
+        {
+            // Initializing component and resources
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(Main));
+
+            // Changing the language
+            _currentCulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = _currentCulture;
+            Thread.CurrentThread.CurrentUICulture = _currentCulture;
+            resources.ApplyResources(this, "$this", _currentCulture);
+
+            // Updating the UI
+            lblHeaderDiscl.Text = resources.GetString("lblHeaderDiscl.Text");
+            lblAboutMadeby.Text = resources.GetString("lblAboutMadeby.Text");
+            lblAboutMadeby.Location = new Point((pnlAbout.Width - lblAboutMadeby.Width) / 2, lblAboutMadeby.Location.Y);
+            lblAboutDesignedby.Text = resources.GetString("lblAboutDesignedby.Text");
+            lblAboutDesignedby.Location = new Point((pnlAbout.Width - lblAboutDesignedby.Width) / 2, lblAboutDesignedby.Location.Y);
+            lblCopyright.Text = resources.GetString("lblCopyright.Text");
+            lblCopyright.Location = new Point((this.Width - lblCopyright.Width) / 2, lblCopyright.Location.Y);
+
+            // Update UI of all pages
+            foreach (var control in pnlPage.Controls)
+            {
+                if (control is PageMain)
+                {
+                    PageMain page = (PageMain)control;
+                    page.UpdateUI();
+                }
+                else if (control is PageSettings)
+                {
+                    PageSettings page = (PageSettings)control;
+                    page.UpdateUI();
+                }
+            }
+        }
+
+        // Language changed event
+        private void cbLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Change the language
+            if (cbLanguage.SelectedIndex == 0)
+            {
+                Settings.Default["Language"] = "en-EN";
+                Settings.Default.Save();
+                UpdateUI("en-EN");
+            }
+            else if (cbLanguage.SelectedIndex == 1)
+            {
+                Settings.Default["Language"] = "ru-RU";
+                Settings.Default.Save();
+                UpdateUI("ru-RU");
+            }
+        }
 
         /*
         [ Page Handler ]
@@ -129,27 +241,6 @@ namespace Fluent_Launcher
 
             // Make the page visible
             pnlPage.Visible = true;
-        }
-
-        /*
-        [ MAIN METHODS ]
-        */
-        private void Main_Load(object sender, EventArgs e)
-        {
-            // Initialize the options state
-            _installOptionsState = new Dictionary<string, bool>();
-            foreach (var group in _installOptions.Keys)
-            {
-                foreach (var option in _installOptions[group])
-                {
-                    _installOptionsState.Add($"{group}:{option}", false);
-                }
-            }
-
-            // Center elements
-            lblCopyright.Location = new Point((this.Width - lblCopyright.Width) / 2, lblCopyright.Location.Y);
-
-            ChangePage(0);
         }
 
         // Close button
