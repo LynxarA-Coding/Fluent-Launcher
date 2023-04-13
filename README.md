@@ -4,6 +4,8 @@
 [![VirusTotal](https://img.shields.io/badge/VirusTotal-11%2F70-green)](https://www.virustotal.com/gui/file/c714016de43108ea311f2909eed8dba85f5fa43dfaaeed9e0947fa3aa30abc16/detection)
 [![Download](https://img.shields.io/badge/Download-click%20here-green)](https://github.com/LynxarA-Coding/Fluent-Launcher/releases/tag/v1.0.0) <br> <br>
 ---
+# FOR INSTALLATION/USAGE GUIDE CLICK [HERE](https://github.com/LynxarA-Coding/Fluent-Launcher/wiki)
+# ДЛЯ ГАЙДА ПО УСТАНОВКЕ/ПОЛЬЗОВАНИЮ НАЖМИТЕ [СЮДА](https://github.com/LynxarA-Coding/Fluent-Launcher/wiki)
 ![image](https://i.imgur.com/maCxfzZ.png)
 <br><br>
 ---
