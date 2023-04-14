@@ -22,6 +22,9 @@ It will definitely motivate me to do more coding in my free time. Don't worry, t
 | Fluent for Steam Patreon  | https://www.patreon.com/FluentForSteam  |
 | Steam Friends Patcher | https://github.com/PhantomGamers/SFP |
 
+## Contributions:
+**French Localization** made by **Daisuke#3667**
+
 ## SFP Patch
 For extra skins like custom Library and Dark Friends List you need to Patch your Steam. To do it, download the latest version of Steam Friends Patcher from the link above. Click **Patch** inside this app and wait for it to finish the patching process. After that, you can check the "I've already patched SFP" checkbox and install Extras.
  
