@@ -48,11 +48,15 @@ namespace Fluent_Launcher
             // Restore settings
             string language = Settings.Default["Language"].ToString();
             _currentCulture = new CultureInfo(language);
-            if (language == "ru-RU")
+            if (language == "fr-FR")
+            {
+                cbLanguage.SelectedIndex = 2;
+            }
+            else if (language == "ru-RU")
             {
                 cbLanguage.SelectedIndex = 1;
             }
-            else
+            else if (language == "en-EN")
             {
                 cbLanguage.SelectedIndex = 0;
             }
@@ -140,6 +144,12 @@ namespace Fluent_Launcher
                 Settings.Default.Save();
                 UpdateUI("ru-RU");
             }
+            else if (cbLanguage.SelectedIndex == 2)
+            {
+                Settings.Default["Language"] = "fr-FR";
+                Settings.Default.Save();
+                UpdateUI("fr-FR");
+            }
         }
 
         /*
@@ -157,7 +167,7 @@ namespace Fluent_Launcher
                     pnlPage.Controls.Clear();
 
                     // New instance of the page
-                    PageMain page = new PageMain() {Owner = this};
+                    PageMain page = new PageMain() { Owner = this };
 
                     // Page settings to make it appear and work
                     page.TopLevel = false;
@@ -172,7 +182,7 @@ namespace Fluent_Launcher
                     pnlPage.Controls.Clear();
 
                     // New instance of the page
-                    PageSettings page1 = new PageSettings() { Owner = this};
+                    PageSettings page1 = new PageSettings() { Owner = this };
 
                     // Page settings to make it appear and work
                     page1.TopLevel = false;

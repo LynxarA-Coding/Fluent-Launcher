@@ -229,4 +229,26 @@
   <data name="lblPageTitle.Text" xml:space="preserve">
     <value>НАСТРОЙКИ</value>
   </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="PatchSteamError" xml:space="preserve">
+    <value>Для использования этой функции необходимо пропатчить Steam. Вы хотите пропатчить Steam сейчас? (Это действие запустит SFP)</value>
+  </data>
+  <data name="PatchSteamGuide" xml:space="preserve">
+    <value>1. После запуска приложения нажмите "Patch"
+2. Дождитесь окончания патча
+3. Закройте Steam, если он был запущен
+
+Нажмите "OK" в этом окне, чтобы запустить SFP</value>
+  </data>
+  <data name="PatchSteamGuideTitle" xml:space="preserve">
+    <value>Инструкция по пропатчиванию Steam</value>
+  </data>
+  <data name="PatchSteamTitle" xml:space="preserve">
+    <value>Пропатчить Steam</value>
+  </data>
+  <data name="SFPLaunched" xml:space="preserve">
+    <value>SFP уже запущен. Пожалуйста, пропатчьте Steam или закройте SFP и попробуйте снова.</value>
+  </data>
 </root>

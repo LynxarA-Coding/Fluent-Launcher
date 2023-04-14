@@ -1,4 +1,5 @@
 ﻿using Fluent_Launcher.BackgroundClasses;
+using Fluent_Launcher.Properties;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -115,34 +116,24 @@ namespace Fluent_Launcher
         {
             Main main = (Main)this.Owner;
             CultureInfo culture = main._currentCulture;
+            // Initializing component and resources
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageMain));
+            resources.ApplyResources(this, "$this", culture);
+
             // If Steam folder is not valid, show error message and stop installation
             if (!_isSteamFolderValid)
             {
                 // Show localized error
-                if (culture.Name == "ru-RU")
-                {
-                    MessageBox.Show("Папка Steam не является действительной!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("The Steam Folder is not valid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
+                MessageBox.Show(resources.GetString("FolderNotValid", culture), resources.GetString("ErrorTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 return;
             }
 
             // If prequisites are not met, show error message and stop installation
             if (!_setup.PrequisitesCheck())
             {
-                if (culture.Name == "ru-RU")
-                {
-                    MessageBox.Show("Не все необходимые файлы установлены. Пожалуйста, установите их и попробуйте снова.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("There are no files for the Fluent installation. Please, download the program again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
+                MessageBox.Show(resources.GetString("NotEnoughFiles", culture), resources.GetString("ErrorTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 return;
             }
 
@@ -165,7 +156,7 @@ namespace Fluent_Launcher
 
             // Copy main files
             installation.Main($"{mainDir}/Files/Main/{versionName}", $"{tbFolder.Text}/skins", versionName);
-            
+
             // Button Option check
             if (main._installOptionsState["AccountButton:Default"])
             {
@@ -240,14 +231,7 @@ namespace Fluent_Launcher
             btnInstall.Enabled = true;
 
             // Show success message
-            if (culture.Name == "ru-RU")
-            {
-                MessageBox.Show("Fluent for Steam был успешно установлен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Fluent for Steam was installed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            MessageBox.Show(resources.GetString("SuccessInstalled", culture), resources.GetString("SuccessTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Uninstall button click event
@@ -255,18 +239,15 @@ namespace Fluent_Launcher
         {
             Main main = (Main)this.Owner;
             CultureInfo culture = main._currentCulture;
+            // Initializing component and resources
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageMain));
+            resources.ApplyResources(this, "$this", culture);
+
             // If Steam folder is not valid, show error message and stop uninstall process
             if (!_isSteamFolderValid)
             {
                 // Show localized error
-                if (culture.Name == "ru-RU")
-                {
-                    MessageBox.Show("Папка Steam не является действительной!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("The Steam Folder is not valid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(resources.GetString("FolderNotValid", culture), resources.GetString("ErrorTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }
@@ -303,26 +284,14 @@ namespace Fluent_Launcher
                 installation.UninstallFile($"{tbFolder.Text}/clientui/", "ofriends.custom.css");
 
                 // Notify the user that skin is uninstalled
-                if (culture.Name == "ru-RU")
-                {
-                    MessageBox.Show("Fluent For Steam был успешно удален! Так как у вас установлен SFP, темная библиотека и друзья были удалены (проверьте дисклеймер при удалении)", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Fluent For Steam has been uninstalled successfully! Since you have SFP, dark friends and library were uninstalled too (check the uninstall disclaimer)", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                MessageBox.Show(resources.GetString("SuccessDeletedSFP", culture), resources.GetString("SuccessTitle"),
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 // Notify the user that skin is uninstalled
-                if (culture.Name == "ru-RU")
-                {
-                    MessageBox.Show("Fluent For Steam был успешно удален!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Fluent For Steam has been uninstalled successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                MessageBox.Show(resources.GetString("SuccessDeleted", culture), resources.GetString("SuccessTitle"),
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -402,18 +371,14 @@ namespace Fluent_Launcher
         // Uninstall disclaimer label click event
         private void lblUninstallDisclaimer_Click(object sender, EventArgs e)
         {
-            Main main = (Main) this.Owner;
+            Main main = (Main)this.Owner;
             // Show localized message
             CultureInfo culture = main._currentCulture;
+            // Initializing component and resources
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageMain));
+            resources.ApplyResources(this, "$this", culture);
 
-            if (culture.Name == "ru-RU")
-            {
-                MessageBox.Show("Удаление Fluent for Steam уберет скин из папки Steam, но не удалит ваши файлы Steam. Однако ваш патч SFP (если он был сделан) будет поврежден, если вы отметили \"Я уже патчил SFP\". Если вы хотите его использовать - повторно примените патч после удаления скина.", "Дисклеймер Удаления", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Uninstall Fluent for Steam will remove the skin from your Steam folder, and will not delete any of your Steam files. However, your SFP patch (if done) will be corrupt if you checked the \"I've already Patched SFP\". If you want to use it - patch again after uninstalling the skin.", "Uninstall Disclaimer", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            MessageBox.Show($"{resources.GetString("UninstallPrompt", culture)}", lblUninstallDisclaimer.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

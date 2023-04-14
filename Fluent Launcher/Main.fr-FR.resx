@@ -117,16 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cbLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 36</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pbLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblHeaderDiscl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblHeaderDiscl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 37</value>
+  </data>
+  <data name="lblHeaderDiscl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 26</value>
+  </data>
+  <data name="lblHeaderDiscl.Text" xml:space="preserve">
+    <value>Ce n'est pas un launcher officiel "Fluent for Steam". 
+Soyez averti, il peut y avoir des bugs</value>
   </data>
   <data name="lblHeader.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -152,14 +159,36 @@
   <data name="lblAboutDesignedby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblAboutDesignedby.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 33</value>
+  </data>
+  <data name="lblAboutDesignedby.Text" xml:space="preserve">
+    <value>Fluent for Steam designé par</value>
+  </data>
   <data name="lblAboutMadeby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblAboutMadeby.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 4</value>
+  </data>
+  <data name="lblAboutMadeby.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 33</value>
+  </data>
+  <data name="lblAboutMadeby.Text" xml:space="preserve">
+    <value>Ce projet est fait par</value>
+  </data>
   <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 430</value>
+    <value>456, 419</value>
   </data>
   <data name="lblCopyright.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="lblCopyright.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 30</value>
+  </data>
+  <data name="lblCopyright.Text" xml:space="preserve">
+    <value>v1.1.2
+Fait par LynxarADev</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

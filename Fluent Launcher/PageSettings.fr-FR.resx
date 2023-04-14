@@ -117,39 +117,117 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnBack.Text" xml:space="preserve">
+    <value>RETOUR</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pnlUninstallPrompt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 259</value>
+  <data name="lblButtonsTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 29</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblUninstallPrompt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lblButtonsTitle.Text" xml:space="preserve">
+    <value>BOUTON COMPTE</value>
   </data>
-  <data name="lblUninstallDisclaimer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lblOverlayTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 29</value>
+  </data>
+  <data name="lblOverlayTitle.Text" xml:space="preserve">
+    <value>INTERFACE CUSTOM</value>
+  </data>
+  <data name="rbOverlayTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 27</value>
+  </data>
+  <data name="rbOverlayTop.Text" xml:space="preserve">
+    <value>Défaut (En haut)</value>
+  </data>
+  <data name="rbOverlayBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 27</value>
+  </data>
+  <data name="rbOverlayBottom.Text" xml:space="preserve">
+    <value>En bas</value>
+  </data>
+  <data name="rbOverlayLeftAlign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 27</value>
+  </data>
+  <data name="rbOverlayLeftAlign.Text" xml:space="preserve">
+    <value>Aligné à gauche</value>
+  </data>
+  <data name="rbOverlayLeftBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 27</value>
+  </data>
+  <data name="rbOverlayLeftBar.Text" xml:space="preserve">
+    <value>Barre à gauche</value>
+  </data>
+  <data name="cbLayoutSidebar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 27</value>
+  </data>
+  <data name="cbLayoutSidebar.Text" xml:space="preserve">
+    <value>Sidebar</value>
+  </data>
+  <data name="rbLayoutCompact.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
+  </data>
+  <data name="rbLayoutCompact.Text" xml:space="preserve">
+    <value>Compact</value>
+  </data>
+  <data name="lblExtraTitle.Text" xml:space="preserve">
+    <value>AUTRE (REQUIERT SFP)</value>
+  </data>
+  <data name="cbExtraFriends.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 27</value>
+  </data>
+  <data name="cbExtraFriends.Text" xml:space="preserve">
+    <value>Liste d'amis sombre</value>
+  </data>
+  <data name="cbExtraLibrary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 27</value>
+  </data>
+  <data name="cbExtraLibrary.Text" xml:space="preserve">
+    <value>Bibliothèque Sombre</value>
+  </data>
+  <data name="rbButtonDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 27</value>
+  </data>
+  <data name="rbButtonDefault.Text" xml:space="preserve">
+    <value>Seulement Pseudo</value>
+  </data>
+  <data name="rbButtonUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 27</value>
+  </data>
+  <data name="rbButtonUsername.Text" xml:space="preserve">
+    <value>Pseudo + Argent</value>
+  </data>
+  <data name="cbSFP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 27</value>
+  </data>
+  <data name="cbSFP.Text" xml:space="preserve">
+    <value>J'ai déjà patcher avec SFP</value>
+  </data>
+  <data name="lblPageTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 42</value>
+  </data>
+  <data name="lblPageTitle.Text" xml:space="preserve">
+    <value>PARAMÈTRES</value>
   </data>
   <data name="ErrorTitle" xml:space="preserve">
-    <value>Error</value>
+    <value>Erreur</value>
   </data>
-  <data name="FolderNotValid" xml:space="preserve">
-    <value>The Steam folder is not valid!</value>
+  <data name="PatchSteamError" xml:space="preserve">
+    <value>Vous devez patch Steam pour utiliser la fonctionnalité. Voulez-vous patcher Steam maintenant? (Cette action ouvrira SFP)</value>
   </data>
-  <data name="NotEnoughFiles" xml:space="preserve">
-    <value>There are no files for the Fluent installation. Please, download the program again.</value>
+  <data name="PatchSteamGuide" xml:space="preserve">
+    <value>1. Quand l'app est ouverte, cliquez sur "Patch"
+2. Attendez que le patch finisse
+3. Fermez Steam si ouvert
+
+Cliquez sur "OK" pour lancer SFP</value>
   </data>
-  <data name="SuccessDeleted" xml:space="preserve">
-    <value>Fluent For Steam has been uninstalled successfully!</value>
+  <data name="PatchSteamGuideTitle" xml:space="preserve">
+    <value>Guide Patch SFP</value>
   </data>
-  <data name="SuccessDeletedSFP" xml:space="preserve">
-    <value>Fluent For Steam has been uninstalled successfully! Since you have SFP, dark friends and library were uninstalled too (check the uninstall disclaimer)</value>
+  <data name="PatchSteamTitle" xml:space="preserve">
+    <value>Patch Steam</value>
   </data>
-  <data name="SuccessTitle" xml:space="preserve">
-    <value>Success</value>
-  </data>
-  <data name="UninstallPrompt" xml:space="preserve">
-    <value>Uninstall Fluent for Steam will remove the skin from your Steam folder, and will not delete any of your Steam files. However, your SFP patch (if done) will be corrupt if you checked the "I've already Patched SFP". If you want to use it - patch again after uninstalling the skin.</value>
-  </data>
-  <data name="SuccessInstalled" xml:space="preserve">
-    <value>Fluent for Steam was installed successfully!</value>
+  <data name="SFPLaunched" xml:space="preserve">
+    <value>SFP est déjà lancé. Patchez Steam ou fermez SFP et réessayez.</value>
   </data>
 </root>

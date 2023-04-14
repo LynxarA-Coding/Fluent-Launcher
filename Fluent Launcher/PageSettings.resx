@@ -155,9 +155,6 @@
   <data name="rbOverlayBottom.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 27</value>
   </data>
-  <data name="&gt;&gt;rbOverlayBottom.Parent" xml:space="preserve">
-    <value>pnlOverlay</value>
-  </data>
   <data name="rbButtonDefault.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 92</value>
   </data>
@@ -170,8 +167,8 @@
   <data name="btnBack.Text" xml:space="preserve">
     <value>GO BACK (SAVE)</value>
   </data>
-  <data name="rbLayoutEssentials.Text" xml:space="preserve">
-    <value>Essentials</value>
+  <data name="pnlExtra.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 111</value>
   </data>
   <data name="rbButtonDefault.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 14.25pt</value>
@@ -227,8 +224,8 @@
   <data name="&gt;&gt;rbOverlayLeftBar.Parent" xml:space="preserve">
     <value>pnlOverlay</value>
   </data>
-  <data name="&gt;&gt;lblButtonsTitle.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;rbLayoutCompact.Parent" xml:space="preserve">
+    <value>pnlLayout</value>
   </data>
   <data name="pnlLayout.Size" type="System.Drawing.Size, System.Drawing">
     <value>326, 128</value>
@@ -260,14 +257,11 @@
   <data name="&gt;&gt;rbOverlayLeftBar.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="pnlOverlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 170</value>
-  </data>
   <data name="lblOverlayTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 4</value>
   </data>
-  <data name="&gt;&gt;rbLayoutCompact.Parent" xml:space="preserve">
-    <value>pnlLayout</value>
+  <data name="pnlOverlay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 170</value>
   </data>
   <data name="rbLayoutEssentialsAlt.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 90</value>
@@ -356,11 +350,8 @@
   <data name="lblPageTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 5</value>
   </data>
-  <data name="&gt;&gt;cbExtraLibrary.Parent" xml:space="preserve">
-    <value>pnlExtra</value>
-  </data>
-  <data name="cbLayoutSidebar.Text" xml:space="preserve">
-    <value>Sidebar</value>
+  <data name="cbExtraLibrary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 27</value>
   </data>
   <data name="lblExtraTitle.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -374,8 +365,8 @@
   <data name="&gt;&gt;rbOverlayBottom.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="rbLayoutCompact.Text" xml:space="preserve">
-    <value>Compact</value>
+  <data name="&gt;&gt;rbOverlayBottom.Parent" xml:space="preserve">
+    <value>pnlOverlay</value>
   </data>
   <data name="&gt;&gt;lblOverlayTitle.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -397,6 +388,9 @@
   </data>
   <data name="&gt;&gt;pnlOverlay.Name" xml:space="preserve">
     <value>pnlOverlay</value>
+  </data>
+  <data name="rbLayoutCompact.Text" xml:space="preserve">
+    <value>Compact</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>PageSettings</value>
@@ -428,8 +422,8 @@
   <data name="pnlPatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>299, 36</value>
   </data>
-  <data name="pnlPatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 285</value>
+  <data name="&gt;&gt;btnBack.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;lblButtonsTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -452,11 +446,17 @@
   <data name="cbSFP.Text" xml:space="preserve">
     <value>I've already patched SFP</value>
   </data>
+  <data name="pnlPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 285</value>
+  </data>
   <data name="lblOverlayTitle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 18pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;cbExtraFriends.Parent" xml:space="preserve">
     <value>pnlExtra</value>
+  </data>
+  <data name="&gt;&gt;rbOverlayLeftAlign.Name" xml:space="preserve">
+    <value>rbOverlayLeftAlign</value>
   </data>
   <data name="cbSFP.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -539,8 +539,8 @@
   <data name="cbExtraFriends.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="cbLayoutSidebar.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="cbLayoutSidebar.Text" xml:space="preserve">
+    <value>Sidebar</value>
   </data>
   <data name="&gt;&gt;rbButtonDefault.Name" xml:space="preserve">
     <value>rbButtonDefault</value>
@@ -572,20 +572,20 @@
   <data name="&gt;&gt;cbLayoutSidebar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="rbButtonDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="rbOverlayTop.Text" xml:space="preserve">
     <value>Default (Top Bar)</value>
   </data>
   <data name="lblExtraTitle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 18pt, style=Bold</value>
   </data>
-  <data name="cbExtraLibrary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 27</value>
+  <data name="rbOverlayLeftBar.Text" xml:space="preserve">
+    <value>Left Bar</value>
   </data>
   <data name="rbButtonUsername.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 117</value>
-  </data>
-  <data name="&gt;&gt;btnBack.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="cbSFP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -599,8 +599,8 @@
   <data name="&gt;&gt;cbExtraLibrary.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="pnlExtra.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 111</value>
+  <data name="&gt;&gt;cbExtraLibrary.Parent" xml:space="preserve">
+    <value>pnlExtra</value>
   </data>
   <data name="lblLayoutTitle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 18pt, style=Bold</value>
@@ -653,8 +653,8 @@
   <data name="&gt;&gt;rbLayoutCompact.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="rbOverlayLeftBar.Text" xml:space="preserve">
-    <value>Left Bar</value>
+  <data name="rbOverlayLeftBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 27</value>
   </data>
   <data name="&gt;&gt;btnBack.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -671,8 +671,8 @@
   <data name="rbOverlayLeftAlign.Text" xml:space="preserve">
     <value>Left Align</value>
   </data>
-  <data name="rbButtonDefault.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;lblButtonsTitle.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;rbButtonUsername.Name" xml:space="preserve">
     <value>rbButtonUsername</value>
@@ -710,6 +710,9 @@
   <data name="&gt;&gt;rbOverlayLeftAlign.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="rbLayoutEssentials.Text" xml:space="preserve">
+    <value>Essentials</value>
+  </data>
   <data name="&gt;&gt;cbExtraLibrary.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -722,17 +725,14 @@
   <data name="lblLayoutTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;rbOverlayLeftAlign.Name" xml:space="preserve">
-    <value>rbOverlayLeftAlign</value>
+  <data name="cbLayoutSidebar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="cbExtraFriends.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 14.25pt</value>
   </data>
   <data name="cbSFP.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 27</value>
-  </data>
-  <data name="rbOverlayLeftBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 27</value>
   </data>
   <data name="rbButtonUsername.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -782,7 +782,32 @@
   <data name="&gt;&gt;rbOverlayLeftAlign.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2RadioButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
+    <value>fr-FR</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="PatchSteamError" xml:space="preserve">
+    <value>You need to patch Steam to use this feature. Do you want to patch Steam now? (This action will start SFP app)</value>
+  </data>
+  <data name="PatchSteamGuide" xml:space="preserve">
+    <value>1. When app is loaded, click "Patch"
+2. Wait for the patch to end
+3. Close Steam if it was opened
+
+Click "OK" in this prompt to launch SFP</value>
+  </data>
+  <data name="PatchSteamGuideTitle" xml:space="preserve">
+    <value>SFP Patch Guide</value>
+  </data>
+  <data name="PatchSteamTitle" xml:space="preserve">
+    <value>Patch Steam</value>
+  </data>
+  <data name="SFPLaunched" xml:space="preserve">
+    <value>SFP is already launched. Please patch Steam or close SFP and try again.</value>
+  </data>
 </root>

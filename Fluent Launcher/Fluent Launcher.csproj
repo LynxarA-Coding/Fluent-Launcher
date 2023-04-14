@@ -224,6 +224,9 @@
     <EmbeddedResource Include="Main.en-US.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main.fr-FR.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -234,6 +237,9 @@
     <EmbeddedResource Include="PageMain.en-US.resx">
       <DependentUpon>PageMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PageMain.fr-FR.resx">
+      <DependentUpon>PageMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PageMain.resx">
       <DependentUpon>PageMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +247,9 @@
       <DependentUpon>PageMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageSettings.en-US.resx">
+      <DependentUpon>PageSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageSettings.fr-FR.resx">
       <DependentUpon>PageSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageSettings.resx">

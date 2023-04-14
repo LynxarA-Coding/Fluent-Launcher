@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageMain));
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnInstall = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnUninstall = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnFolderSelect = new Guna.UI2.WinForms.Guna2Button();
             this.tbFolder = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,7 +40,6 @@
             this.btnUninstallYes = new Guna.UI2.WinForms.Guna2TileButton();
             this.lblUninstallPrompt = new System.Windows.Forms.Label();
             this.lblUninstallDisclaimer = new System.Windows.Forms.Label();
-            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.pnlButtons.SuspendLayout();
             this.pnlUninstallPrompt.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,21 @@
             this.btnInstall.Name = "btnInstall";
             this.btnInstall.ShadowDecoration.Parent = this.btnInstall;
             this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
+            // 
+            // btnSettings
+            // 
+            resources.ApplyResources(this.btnSettings, "btnSettings");
+            this.btnSettings.BorderRadius = 15;
+            this.btnSettings.CheckedState.Parent = this.btnSettings;
+            this.btnSettings.CustomImages.Parent = this.btnSettings;
+            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.HoverState.Parent = this.btnSettings;
+            this.btnSettings.Image = global::Fluent_Launcher.Properties.Resources.fluent_settings;
+            this.btnSettings.ImageSize = new System.Drawing.Size(80, 40);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnUninstall
             // 
@@ -167,21 +182,6 @@
             this.lblUninstallDisclaimer.ForeColor = System.Drawing.Color.White;
             this.lblUninstallDisclaimer.Name = "lblUninstallDisclaimer";
             this.lblUninstallDisclaimer.Click += new System.EventHandler(this.lblUninstallDisclaimer_Click);
-            // 
-            // btnSettings
-            // 
-            resources.ApplyResources(this.btnSettings, "btnSettings");
-            this.btnSettings.BorderRadius = 15;
-            this.btnSettings.CheckedState.Parent = this.btnSettings;
-            this.btnSettings.CustomImages.Parent = this.btnSettings;
-            this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.HoverState.Parent = this.btnSettings;
-            this.btnSettings.Image = global::Fluent_Launcher.Properties.Resources.fluent_settings;
-            this.btnSettings.ImageSize = new System.Drawing.Size(80, 40);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // PageMain
             // 

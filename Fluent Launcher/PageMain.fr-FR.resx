@@ -117,39 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnInstall.Text" xml:space="preserve">
+    <value>INSTALLER</value>
+  </data>
+  <data name="btnUninstall.Text" xml:space="preserve">
+    <value>DÉSINSTALLER</value>
+  </data>
+  <data name="btnFolderSelect.Text" xml:space="preserve">
+    <value>CHOISIR</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pnlUninstallPrompt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 259</value>
+    <value>177, 271</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblUninstallPrompt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnUninstallNo.Text" xml:space="preserve">
+    <value>NON</value>
   </data>
-  <data name="lblUninstallDisclaimer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnUninstallYes.Text" xml:space="preserve">
+    <value>OUI</value>
+  </data>
+  <data name="lblUninstallPrompt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 21.75pt, style=Bold</value>
+  </data>
+  <data name="lblUninstallPrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 15</value>
+  </data>
+  <data name="lblUninstallPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 72</value>
+  </data>
+  <data name="lblUninstallPrompt.Text" xml:space="preserve">
+    <value>ÊTES-VOUS SÛR 
+DE VOULOIR DÉSINSTALLER?</value>
+  </data>
+  <data name="lblUninstallDisclaimer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 233</value>
+  </data>
+  <data name="lblUninstallDisclaimer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 23</value>
+  </data>
+  <data name="lblUninstallDisclaimer.Text" xml:space="preserve">
+    <value>AVERTISSEMENT DÉSINSTALLATION</value>
   </data>
   <data name="ErrorTitle" xml:space="preserve">
-    <value>Error</value>
+    <value>Erreur</value>
   </data>
   <data name="FolderNotValid" xml:space="preserve">
-    <value>The Steam folder is not valid!</value>
+    <value>Le dossier Steam n'est pas valide!</value>
   </data>
   <data name="NotEnoughFiles" xml:space="preserve">
-    <value>There are no files for the Fluent installation. Please, download the program again.</value>
+    <value>Il n'y a pas de fichiers pour l'installation. Veuillez retélécharger le programme.</value>
   </data>
   <data name="SuccessDeleted" xml:space="preserve">
-    <value>Fluent For Steam has been uninstalled successfully!</value>
+    <value>Fluent for Steam a été désinstallé avec succès!</value>
   </data>
   <data name="SuccessDeletedSFP" xml:space="preserve">
-    <value>Fluent For Steam has been uninstalled successfully! Since you have SFP, dark friends and library were uninstalled too (check the uninstall disclaimer)</value>
-  </data>
-  <data name="SuccessTitle" xml:space="preserve">
-    <value>Success</value>
-  </data>
-  <data name="UninstallPrompt" xml:space="preserve">
-    <value>Uninstall Fluent for Steam will remove the skin from your Steam folder, and will not delete any of your Steam files. However, your SFP patch (if done) will be corrupt if you checked the "I've already Patched SFP". If you want to use it - patch again after uninstalling the skin.</value>
+    <value>Fluent for Steam a été désinstallé avec succès! Vous avez SFP donc la bibliothèque et la liste d'amis sombre ont été désinstallés (lire avertissement désinstallation)</value>
   </data>
   <data name="SuccessInstalled" xml:space="preserve">
-    <value>Fluent for Steam was installed successfully!</value>
+    <value>Fluent for Steam a été installé avec succès!</value>
+  </data>
+  <data name="SuccessTitle" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="UninstallPrompt" xml:space="preserve">
+    <value>Désinstaller Fluent for Steam supprimera le skin de votre dossier Steam, et ne supprimera aucun de vos fichiers Steam. Cependant, le patch SFP (si fait) sera corrompu si vous avez coché "J'ai déjà patcher avec SFP". Si vous souhaitez l'utiliser - veuillez patcher Steam après avoir désinstaller le skin</value>
   </data>
 </root>

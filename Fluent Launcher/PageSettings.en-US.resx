@@ -117,8 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="PatchSteamError" xml:space="preserve">
+    <value>You need to patch Steam to use this feature. Do you want to patch Steam now? (This action will start SFP app)</value>
+  </data>
+  <data name="PatchSteamGuide" xml:space="preserve">
+    <value>1. When app is loaded, click "Patch"
+2. Wait for the patch to end
+3. Close Steam if it was opened
+
+Click "OK" in this prompt to launch SFP</value>
+  </data>
+  <data name="PatchSteamGuideTitle" xml:space="preserve">
+    <value>SFP Patch Guide</value>
+  </data>
+  <data name="PatchSteamTitle" xml:space="preserve">
+    <value>Patch Steam</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pnlPatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>327, 286</value>
+  </data>
+  <data name="SFPLaunched" xml:space="preserve">
+    <value>SFP is already launched. Please patch Steam or close SFP and try again.</value>
   </data>
 </root>

@@ -162,4 +162,28 @@
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="FolderNotValid" xml:space="preserve">
+    <value>Папка Steam указана не верно!</value>
+  </data>
+  <data name="NotEnoughFiles" xml:space="preserve">
+    <value>Не все необходимые файлы установлены. Пожалуйста, установите их и попробуйте снова.</value>
+  </data>
+  <data name="SuccessDeleted" xml:space="preserve">
+    <value>Fluent For Steam был успешно удален!</value>
+  </data>
+  <data name="SuccessDeletedSFP" xml:space="preserve">
+    <value>Fluent For Steam был успешно удален! Так как у вас установлен SFP, темная библиотека и друзья были удалены (проверьте дисклеймер при удалении)</value>
+  </data>
+  <data name="SuccessTitle" xml:space="preserve">
+    <value>Успех</value>
+  </data>
+  <data name="UninstallPrompt" xml:space="preserve">
+    <value>Удаление Fluent for Steam уберет скин из папки Steam, но не удалит ваши файлы Steam. Однако ваш патч SFP (если он был сделан) будет поврежден, если вы отметили "Я уже патчил SFP". Если вы хотите его использовать - повторно примените патч после удаления скина.</value>
+  </data>
+  <data name="SuccessInstalled" xml:space="preserve">
+    <value>Fluent For Steam был успешно установлен!</value>
+  </data>
 </root>

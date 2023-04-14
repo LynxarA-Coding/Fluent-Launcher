@@ -58,17 +58,18 @@
             // 
             // pnlHeader
             // 
+            resources.ApplyResources(this.pnlHeader, "pnlHeader");
             this.pnlHeader.Controls.Add(this.cbLanguage);
             this.pnlHeader.Controls.Add(this.pbLogo);
             this.pnlHeader.Controls.Add(this.lblHeaderDiscl);
             this.pnlHeader.Controls.Add(this.lblHeader);
             this.pnlHeader.Controls.Add(this.btnClose);
-            resources.ApplyResources(this.pnlHeader, "pnlHeader");
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.ShadowDecoration.Parent = this.pnlHeader;
             // 
             // cbLanguage
             // 
+            resources.ApplyResources(this.cbLanguage, "cbLanguage");
             this.cbLanguage.BackColor = System.Drawing.Color.Transparent;
             this.cbLanguage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.cbLanguage.BorderRadius = 6;
@@ -77,13 +78,13 @@
             this.cbLanguage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.cbLanguage.FocusedColor = System.Drawing.Color.Empty;
             this.cbLanguage.FocusedState.Parent = this.cbLanguage;
-            resources.ApplyResources(this.cbLanguage, "cbLanguage");
             this.cbLanguage.ForeColor = System.Drawing.Color.White;
             this.cbLanguage.FormattingEnabled = true;
             this.cbLanguage.HoverState.Parent = this.cbLanguage;
             this.cbLanguage.Items.AddRange(new object[] {
             resources.GetString("cbLanguage.Items"),
-            resources.GetString("cbLanguage.Items1")});
+            resources.GetString("cbLanguage.Items1"),
+            resources.GetString("cbLanguage.Items2")});
             this.cbLanguage.ItemsAppearance.Parent = this.cbLanguage;
             this.cbLanguage.Name = "cbLanguage";
             this.cbLanguage.ShadowDecoration.Parent = this.cbLanguage;
@@ -92,8 +93,8 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Image = global::Fluent_Launcher.Properties.Resources.fleuntuserdiscord_circle;
             resources.ApplyResources(this.pbLogo, "pbLogo");
+            this.pbLogo.Image = global::Fluent_Launcher.Properties.Resources.fleuntuserdiscord_circle;
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.TabStop = false;
             // 
@@ -111,8 +112,8 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::Fluent_Launcher.Properties.Resources.cancel_white;
             resources.ApplyResources(this.btnClose, "btnClose");
+            this.btnClose.Image = global::Fluent_Launcher.Properties.Resources.cancel_white;
             this.btnClose.Name = "btnClose";
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -135,6 +136,7 @@
             // 
             // pnlAbout
             // 
+            resources.ApplyResources(this.pnlAbout, "pnlAbout");
             this.pnlAbout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.pnlAbout.BorderRadius = 15;
             this.pnlAbout.BorderThickness = 2;
@@ -145,14 +147,13 @@
             this.pnlAbout.Controls.Add(this.lblAboutLynxara);
             this.pnlAbout.Controls.Add(this.lblAboutDesignedby);
             this.pnlAbout.Controls.Add(this.lblAboutMadeby);
-            resources.ApplyResources(this.pnlAbout, "pnlAbout");
             this.pnlAbout.Name = "pnlAbout";
             this.pnlAbout.ShadowDecoration.Parent = this.pnlAbout;
             // 
             // pbAboutLogo
             // 
-            this.pbAboutLogo.Image = global::Fluent_Launcher.Properties.Resources.fleuntuserdiscord_circle;
             resources.ApplyResources(this.pbAboutLogo, "pbAboutLogo");
+            this.pbAboutLogo.Image = global::Fluent_Launcher.Properties.Resources.fleuntuserdiscord_circle;
             this.pbAboutLogo.Name = "pbAboutLogo";
             this.pbAboutLogo.TabStop = false;
             // 
@@ -171,8 +172,8 @@
             // 
             // btnAboutClose
             // 
-            this.btnAboutClose.Image = global::Fluent_Launcher.Properties.Resources.cancel_white;
             resources.ApplyResources(this.btnAboutClose, "btnAboutClose");
+            this.btnAboutClose.Image = global::Fluent_Launcher.Properties.Resources.cancel_white;
             this.btnAboutClose.Name = "btnAboutClose";
             this.btnAboutClose.TabStop = false;
             this.btnAboutClose.Click += new System.EventHandler(this.btnAboutClose_Click);
@@ -202,9 +203,9 @@
             // 
             // Main
             // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.pnlAbout);
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.pnlHeader);

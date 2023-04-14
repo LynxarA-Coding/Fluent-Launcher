@@ -111,16 +111,13 @@ namespace Fluent_Launcher
         {
             Main main = (Main)Owner;
             CultureInfo culture = main._currentCulture;
+            // Initializing component and resources
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageSettings));
+            resources.ApplyResources(this, "$this", culture);
 
             DialogResult result = DialogResult.None;
-            if (culture.Name == "ru-RU")
-            {
-                result = MessageBox.Show("Для использования этой функции необходимо пропатчить Steam. Вы хотите пропатчить Steam сейчас? (Это действие запустит SFP)", "Пропатчить Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            }
-            else
-            {
-                result = MessageBox.Show("You need to patch Steam to use this feature. Do you want to patch Steam now? (This action will start SFP app)", "Patch Steam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            }
+            result = MessageBox.Show(resources.GetString("PatchSteamError", culture),
+                resources.GetString("PatchSteamTitle", culture), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
@@ -131,14 +128,7 @@ namespace Fluent_Launcher
                 if (Process.GetProcessesByName("SFP_UI").Length == 0)
                 {
                     // Make a prompt with explanation
-                    if (culture.Name == "ru-RU")
-                    {
-                        MessageBox.Show("1. После запуска приложения нажмите \"Patch\"\n2. Дождитесь окончания патча\n3. Закройте Steam, если он был запущен\n\nНажмите \"OK\" в этом окне, чтобы запустить SFP", "Инструкция по пропатчиванию Steam", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("1. When app is loaded, click \"Patch\"\n2. Wait for the patch to end\n3. Close Steam if it was opened\n\nClick \"OK\" in this prompt to launch SFP", "SFP Patch Guide", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    MessageBox.Show(resources.GetString("PatchSteamGuide", culture), resources.GetString("PatchSteamGuideTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Launch SFP
                     Process.Start(sfpPath);
@@ -146,14 +136,8 @@ namespace Fluent_Launcher
                 else
                 {
                     // SFP is already launched error
-                    if (culture.Name == "ru-RU")
-                    {
-                        MessageBox.Show("SFP уже запущен. Пожалуйста, пропатчьте Steam или закройте SFP и попробуйте снова.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("SFP is already launched. Please patch Steam or close SFP and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show(resources.GetString("SFPLaunched", culture),
+                        resources.GetString("ErrorTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
