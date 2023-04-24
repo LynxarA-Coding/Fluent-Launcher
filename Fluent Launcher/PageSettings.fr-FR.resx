@@ -157,17 +157,11 @@
   <data name="rbOverlayLeftBar.Text" xml:space="preserve">
     <value>Barre à gauche</value>
   </data>
-  <data name="cbLayoutSidebar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 27</value>
+  <data name="cbLayoutSidebarText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 27</value>
   </data>
-  <data name="cbLayoutSidebar.Text" xml:space="preserve">
-    <value>Sidebar</value>
-  </data>
-  <data name="rbLayoutCompact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
-  </data>
-  <data name="rbLayoutCompact.Text" xml:space="preserve">
-    <value>Compact</value>
+  <data name="cbLayoutSidebarText.Text" xml:space="preserve">
+    <value>Sidebar + Texte</value>
   </data>
   <data name="lblExtraTitle.Text" xml:space="preserve">
     <value>AUTRE (REQUIERT SFP)</value>

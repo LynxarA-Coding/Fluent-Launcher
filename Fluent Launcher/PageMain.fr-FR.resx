@@ -126,16 +126,13 @@
   <data name="btnFolderSelect.Text" xml:space="preserve">
     <value>CHOISIR</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pnlUninstallPrompt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 271</value>
-  </data>
   <data name="btnUninstallNo.Text" xml:space="preserve">
     <value>NON</value>
   </data>
   <data name="btnUninstallYes.Text" xml:space="preserve">
     <value>OUI</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblUninstallPrompt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 21.75pt, style=Bold</value>
   </data>
@@ -149,6 +146,9 @@
     <value>ÊTES-VOUS SÛR 
 DE VOULOIR DÉSINSTALLER?</value>
   </data>
+  <data name="pnlUninstallPrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 271</value>
+  </data>
   <data name="lblUninstallDisclaimer.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 233</value>
   </data>
@@ -157,6 +157,10 @@ DE VOULOIR DÉSINSTALLER?</value>
   </data>
   <data name="lblUninstallDisclaimer.Text" xml:space="preserve">
     <value>AVERTISSEMENT DÉSINSTALLATION</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
   <data name="ErrorTitle" xml:space="preserve">
     <value>Erreur</value>

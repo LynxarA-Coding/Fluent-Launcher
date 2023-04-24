@@ -218,14 +218,11 @@
   <data name="lblAboutOpurojo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblHeaderDiscl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
-  <data name="lblAboutLink.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblCopyright.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 416</value>
   </data>
   <data name="lblHeader.Text" xml:space="preserve">
     <value>FLUENT LAUNCHER</value>
@@ -278,6 +275,9 @@
   </data>
   <data name="&gt;&gt;lblCopyright.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="pbAboutLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
   <data name="btnAboutClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>459, 8</value>
@@ -419,9 +419,6 @@
   </data>
   <data name="pnlPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 80</value>
-  </data>
-  <data name="lblCopyright.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 416</value>
   </data>
   <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
     <value>pbLogo</value>
@@ -681,6 +678,9 @@
   <data name="lblAboutDesignedby.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="lblAboutLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="lblAboutMadeby.Text" xml:space="preserve">
     <value>This project is made by</value>
   </data>
@@ -716,7 +716,7 @@ Be advised, it may have critical bugs</value>
     <value>pnlHeader</value>
   </data>
   <data name="lblCopyright.Text" xml:space="preserve">
-    <value>v1.1.2
+    <value>v1.1.3
 Made by LynxarADev</value>
   </data>
   <data name="lblAboutLink.Location" type="System.Drawing.Point, System.Drawing">
@@ -749,8 +749,8 @@ Made by LynxarADev</value>
   <data name="&gt;&gt;cbLanguage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pbAboutLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="lblHeaderDiscl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 26</value>
   </data>
   <data name="cbLanguage.Items" xml:space="preserve">
     <value>EN</value>
@@ -792,6 +792,6 @@ Made by LynxarADev</value>
     <value>136, 17</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fr-FR</value>
+    <value>ru-RU</value>
   </metadata>
 </root>

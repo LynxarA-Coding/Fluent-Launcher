@@ -141,42 +141,6 @@ Soyez averti, il peut y avoir des bugs</value>
   <data name="btnClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pbAboutLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutOpurojo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAboutClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutLynxara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutDesignedby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutDesignedby.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 33</value>
-  </data>
-  <data name="lblAboutDesignedby.Text" xml:space="preserve">
-    <value>Fluent for Steam designé par</value>
-  </data>
-  <data name="lblAboutMadeby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutMadeby.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 4</value>
-  </data>
-  <data name="lblAboutMadeby.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 33</value>
-  </data>
-  <data name="lblAboutMadeby.Text" xml:space="preserve">
-    <value>Ce projet est fait par</value>
-  </data>
   <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
     <value>456, 419</value>
   </data>
@@ -187,7 +151,7 @@ Soyez averti, il peut y avoir des bugs</value>
     <value>115, 30</value>
   </data>
   <data name="lblCopyright.Text" xml:space="preserve">
-    <value>v1.1.2
+    <value>v1.1.3
 Fait par LynxarADev</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -369,5 +333,41 @@ Fait par LynxarADev</value>
         gUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoGYcvg/KWhi/ndd
         Y5gAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="pbAboutLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutOpurojo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAboutClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutLynxara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutDesignedby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutDesignedby.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 33</value>
+  </data>
+  <data name="lblAboutDesignedby.Text" xml:space="preserve">
+    <value>Fluent for Steam designé par</value>
+  </data>
+  <data name="lblAboutMadeby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutMadeby.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 4</value>
+  </data>
+  <data name="lblAboutMadeby.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 33</value>
+  </data>
+  <data name="lblAboutMadeby.Text" xml:space="preserve">
+    <value>Ce projet est fait par</value>
   </data>
 </root>

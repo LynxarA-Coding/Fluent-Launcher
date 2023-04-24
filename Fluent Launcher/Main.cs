@@ -26,7 +26,7 @@ namespace Fluent_Launcher
         private readonly Dictionary<string, string[]> _installOptions = new Dictionary<string, string[]>
         {
             { "AccountButton", new[] { "Default", "Username" } },
-            {"Layout", new[] {"Compact", "Essentials", "Essentials Alternative", "Sidebar"}},
+            {"Layout", new[] {"Compact", "Essentials", "Essentials Alternative", "Sidebar", "Sidebar Text"}},
             {"CustomOverlay", new[] {"Default", "Bottom", "Left Align", "Left Bar"}},
             {"Extra", new []{"Dark Library", "Dark Friends List"}}
         };
@@ -35,7 +35,7 @@ namespace Fluent_Launcher
         [ MAIN METHOD ]
         */
 
-        private readonly string appVersion = "v1.1.2"; // Current App version
+        private readonly string appVersion = "v1.1.3"; // Current App version
         private void Main_Load(object sender, EventArgs e)
         {
             if (!_setup.VersionCheck(appVersion))

@@ -60,6 +60,9 @@ namespace Fluent_Launcher
             rbButtonDefault.Text = resources.GetString("rbButtonDefault.Text");
             rbButtonUsername.Text = resources.GetString("rbButtonUsername.Text");
             cbLayoutSidebar.Text = resources.GetString("cbLayoutSidebar.Text");
+            cbLayoutSidebarText.Text = resources.GetString("cbLayoutSidebarText.Text");
+            object LayoutSidebarLocation = resources.GetObject("cbLayoutSidebarText.Location");
+            cbLayoutSidebarText.Location = (Point)LayoutSidebarLocation;
             rbLayoutCompact.Text = resources.GetString("rbLayoutCompact.Text");
             rbLayoutEssentials.Text = resources.GetString("rbLayoutEssentials.Text");
             rbLayoutEssentialsAlt.Text = resources.GetString("rbLayoutEssentialsAlt.Text");
@@ -151,21 +154,14 @@ namespace Fluent_Launcher
                 Main main = (Main)Owner;
                 string name = cb.Name;
 
-                // Layout handler
-                if (name == "cbLayoutSidebar")
+                // Change Sidebar style
+                if (name == "cbLayoutSidebar" && cb.Checked)
                 {
-                    main._installOptionsState["Layout:Sidebar"] = cb.Checked;
-
-                    // Check if the checkbox of Compact layout is checked, if not, check it and uncheck the other two
-                    if (cb.Checked)
-                    {
-                        rbLayoutCompact.Checked = cb.Checked;
-                        main._installOptionsState["Layout:Compact"] = cb.Checked;
-                        main._installOptionsState["Layout:Essentials"] = !cb.Checked;
-                        main._installOptionsState["Layout:Essentials Alternative"] = !cb.Checked;
-                    }
-
-                    return;
+                    cbLayoutSidebarText.Checked = false;
+                }
+                else if (name == "cbLayoutSidebarText" && cb.Checked)
+                {
+                    cbLayoutSidebar.Checked = false;
                 }
 
                 if (name == "cbExtraLibrary")

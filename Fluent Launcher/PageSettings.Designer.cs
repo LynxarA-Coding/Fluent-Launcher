@@ -41,6 +41,7 @@
             this.rbLayoutCompact = new Guna.UI2.WinForms.Guna2RadioButton();
             this.pnlOverlay = new System.Windows.Forms.Panel();
             this.pnlLayout = new System.Windows.Forms.Panel();
+            this.cbLayoutSidebarText = new Guna.UI2.WinForms.Guna2CheckBox();
             this.rbLayoutEssentials = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbLayoutEssentialsAlt = new Guna.UI2.WinForms.Guna2RadioButton();
             this.pnlExtra = new System.Windows.Forms.Panel();
@@ -214,11 +215,28 @@
             // 
             resources.ApplyResources(this.pnlLayout, "pnlLayout");
             this.pnlLayout.Controls.Add(this.lblLayoutTitle);
+            this.pnlLayout.Controls.Add(this.cbLayoutSidebarText);
             this.pnlLayout.Controls.Add(this.cbLayoutSidebar);
             this.pnlLayout.Controls.Add(this.rbLayoutEssentials);
             this.pnlLayout.Controls.Add(this.rbLayoutEssentialsAlt);
             this.pnlLayout.Controls.Add(this.rbLayoutCompact);
             this.pnlLayout.Name = "pnlLayout";
+            // 
+            // cbLayoutSidebarText
+            // 
+            resources.ApplyResources(this.cbLayoutSidebarText, "cbLayoutSidebarText");
+            this.cbLayoutSidebarText.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbLayoutSidebarText.CheckedState.BorderRadius = 2;
+            this.cbLayoutSidebarText.CheckedState.BorderThickness = 0;
+            this.cbLayoutSidebarText.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbLayoutSidebarText.ForeColor = System.Drawing.Color.White;
+            this.cbLayoutSidebarText.Name = "cbLayoutSidebarText";
+            this.cbLayoutSidebarText.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.cbLayoutSidebarText.UncheckedState.BorderRadius = 2;
+            this.cbLayoutSidebarText.UncheckedState.BorderThickness = 0;
+            this.cbLayoutSidebarText.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.cbLayoutSidebarText.UseVisualStyleBackColor = true;
+            this.cbLayoutSidebarText.CheckedChanged += new System.EventHandler(this.cbCheckedChanged);
             // 
             // rbLayoutEssentials
             // 
@@ -431,5 +449,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnlPatch;
         private Guna.UI2.WinForms.Guna2CheckBox cbSFP;
         private System.Windows.Forms.Label lblPageTitle;
+        private Guna.UI2.WinForms.Guna2CheckBox cbLayoutSidebarText;
     }
 }
