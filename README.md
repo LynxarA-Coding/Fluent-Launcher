@@ -1,4 +1,4 @@
-# [WIP] Fluent Launcher
+# Fluent Launcher
 [![Windows Supported](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)]() <br>
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b96c2d74623c4d858f3dd3eda92e37d2)](https://app.codacy.com/gh/LynxarA-Coding/Fluent-Launcher/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) 
 [![VirusTotal](https://img.shields.io/badge/VirusTotal-11%2F70-green)](https://www.virustotal.com/gui/file/c714016de43108ea311f2909eed8dba85f5fa43dfaaeed9e0947fa3aa30abc16/detection)
