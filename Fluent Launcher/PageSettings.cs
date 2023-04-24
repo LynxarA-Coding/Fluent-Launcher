@@ -87,6 +87,7 @@ namespace Fluent_Launcher
             // Load settings
             // Layout restore
             cbLayoutSidebar.Checked = main._installOptionsState["Layout:Sidebar"];
+            cbLayoutSidebarText.Checked = main._installOptionsState["Layout:Sidebar Text"];
             rbLayoutCompact.Checked = main._installOptionsState["Layout:Compact"];
             rbLayoutEssentials.Checked = main._installOptionsState["Layout:Essentials"];
             rbLayoutEssentialsAlt.Checked = main._installOptionsState["Layout:Essentials Alternative"];
@@ -158,10 +159,12 @@ namespace Fluent_Launcher
                 if (name == "cbLayoutSidebar" && cb.Checked)
                 {
                     cbLayoutSidebarText.Checked = false;
+                    main._installOptionsState["Layout:Sidebar"] = cbLayoutSidebar.Checked;
                 }
                 else if (name == "cbLayoutSidebarText" && cb.Checked)
                 {
                     cbLayoutSidebar.Checked = false;
+                    main._installOptionsState["Layout:Sidebar Text"] = cbLayoutSidebarText.Checked;
                 }
 
                 if (name == "cbExtraLibrary")
@@ -214,7 +217,7 @@ namespace Fluent_Launcher
                 }
 
                 // Overlay settings handler
-                if (name == "rbOverlayDefault")
+                if (name == "rbOverlayTop")
                 {
                     main._installOptionsState["CustomOverlay:Default"] = rb.Checked;
                     main._installOptionsState["CustomOverlay:Bottom"] = !rb.Checked;
