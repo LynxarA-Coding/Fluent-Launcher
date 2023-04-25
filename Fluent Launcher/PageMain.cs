@@ -190,7 +190,7 @@ namespace Fluent_Launcher
                 // install Sidebar
                 installation.Install($"{mainDir}/Files/Options/Client Layouts/Sidebar", $"{tbFolder.Text}/skins/{versionName}");
             }
-            else if (main._installOptionsState["Layout:SidebarText"])
+            else if (main._installOptionsState["Layout:Sidebar Text"])
             {
                 // Install Sidebar + Text
                 installation.Install($"{mainDir}/Files/Options/Client Layouts/Sidebar Text", $"{tbFolder.Text}/skins/{versionName}");

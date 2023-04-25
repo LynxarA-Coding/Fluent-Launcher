@@ -156,14 +156,22 @@ namespace Fluent_Launcher
                 string name = cb.Name;
 
                 // Change Sidebar style
-                if (name == "cbLayoutSidebar" && cb.Checked)
+                if (name == "cbLayoutSidebar")
                 {
-                    cbLayoutSidebarText.Checked = false;
+                    if (cb.Checked)
+                    {
+                        cbLayoutSidebarText.Checked = false;
+                    }
+                    
                     main._installOptionsState["Layout:Sidebar"] = cbLayoutSidebar.Checked;
                 }
-                else if (name == "cbLayoutSidebarText" && cb.Checked)
+                else if (name == "cbLayoutSidebarText")
                 {
-                    cbLayoutSidebar.Checked = false;
+                    if (cb.Checked)
+                    {
+                        cbLayoutSidebar.Checked = false;
+                    }
+                    
                     main._installOptionsState["Layout:Sidebar Text"] = cbLayoutSidebarText.Checked;
                 }
 
@@ -177,7 +185,7 @@ namespace Fluent_Launcher
                         // Launch SFP prompt
                         LaunchSFP();
                     }
-                    else if (cbExtraLibrary.Checked && main._isPatched)
+                    else 
                     {
                         main._installOptionsState["Extra:Dark Library"] = cbExtraLibrary.Checked;
                     }
@@ -193,7 +201,7 @@ namespace Fluent_Launcher
                         LaunchSFP();
                         
                     }
-                    else if (cbExtraFriends.Checked && main._isPatched)
+                    else
                     {
                         main._installOptionsState["Extra:Dark Friends List"] = cbExtraFriends.Checked;
                     }
