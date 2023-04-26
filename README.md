@@ -23,7 +23,7 @@ It will definitely motivate me to do more coding in my free time. Don't worry, t
 | Steam Friends Patcher | https://github.com/PhantomGamers/SFP |
 
 ## Contributions:
-**French Localization** made by **Daisuke#3667**
+**French Localization** made by **Daisuke#3667** <br>
 **Russian Localization** made by **Dr.KLIKER#8767**
 
 ## SFP Patch
