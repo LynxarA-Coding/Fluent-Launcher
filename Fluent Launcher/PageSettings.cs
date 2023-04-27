@@ -257,21 +257,42 @@ namespace Fluent_Launcher
                 // Layout settings handler
                 if (name == "rbLayoutCompact")
                 {
-                    main._installOptionsState["Layout:Compact"] = rb.Checked;
-                    main._installOptionsState["Layout:Essentials"] = !rb.Checked;
-                    main._installOptionsState["Layout:Essentials Alternative"] = !rb.Checked;
+                    if (rb.Checked)
+                    {
+                        main._installOptionsState["Layout:Compact"] = true;
+                        main._installOptionsState["Layout:Essentials"] = false;
+                        main._installOptionsState["Layout:Essentials Alternative"] = false;
+                    }
+                    else
+                    {
+                        main._installOptionsState["Layout:Compact"] = false;
+                    }
                 }
                 else if (name == "rbLayoutEssentials")
                 {
-                    main._installOptionsState["Layout:Essentials"] = rb.Checked;
-                    main._installOptionsState["Layout:Compact"] = !rb.Checked;
-                    main._installOptionsState["Layout:Essentials Alternative"] = !rb.Checked;
+                    if (rb.Checked)
+                    {
+                        main._installOptionsState["Layout:Essentials"] = true;
+                        main._installOptionsState["Layout:Compact"] = false;
+                        main._installOptionsState["Layout:Essentials Alternative"] = false;
+                    }
+                    else
+                    {
+                        main._installOptionsState["Layout:Essentials"] = false;
+                    }
                 }
                 else if (name == "rbLayoutEssentialsAlt")
                 {
-                    main._installOptionsState["Layout:Essentials Alternative"] = rb.Checked;
-                    main._installOptionsState["Layout:Compact"] = !rb.Checked;
-                    main._installOptionsState["Layout:Essentials"] = !rb.Checked;
+                    if (rb.Checked)
+                    {
+                        main._installOptionsState["Layout:Essentials Alternative"] = true;
+                        main._installOptionsState["Layout:Compact"] = false;
+                        main._installOptionsState["Layout:Essentials"] = false;
+                    }
+                    else
+                    {
+                        main._installOptionsState["Layout:Essentials Alternative"] = false;
+                    }
                 }
             }
         }

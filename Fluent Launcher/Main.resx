@@ -142,9 +142,6 @@
   <data name="&gt;&gt;DragControl.Name" xml:space="preserve">
     <value>DragControl</value>
   </data>
-  <data name="lblAboutLink.Text" xml:space="preserve">
-    <value>https://github.com/LynxarA-Coding/Fluent-Launcher</value>
-  </data>
   <data name="&gt;&gt;pbAboutLogo.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -218,6 +215,9 @@
   <data name="lblAboutOpurojo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblHeaderDiscl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 26</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
@@ -276,14 +276,8 @@
   <data name="&gt;&gt;lblCopyright.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pbAboutLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
   <data name="btnAboutClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>459, 8</value>
-  </data>
-  <data name="lblHeader.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 24pt, style=Bold</value>
   </data>
   <data name="lblAboutMadeby.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 33</value>
@@ -300,6 +294,9 @@
   <data name="pnlPage.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
+  <data name="&gt;&gt;lblAboutLink.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;lblAboutDesignedby.Parent" xml:space="preserve">
     <value>pnlAbout</value>
   </data>
@@ -309,14 +306,14 @@
   <data name="lblAboutLynxara.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 45</value>
   </data>
-  <data name="lblAboutMadeby.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;pnlAbout.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;pbAboutLogo.Name" xml:space="preserve">
-    <value>pbAboutLogo</value>
+  <data name="&gt;&gt;cbLanguage.Name" xml:space="preserve">
+    <value>cbLanguage</value>
+  </data>
+  <data name="&gt;&gt;cbLanguage.Parent" xml:space="preserve">
+    <value>pnlHeader</value>
   </data>
   <data name="pnlHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -413,6 +410,9 @@
   </data>
   <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;pbAboutLogo.Name" xml:space="preserve">
+    <value>pbAboutLogo</value>
   </data>
   <data name="&gt;&gt;lblAboutMadeby.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -630,8 +630,8 @@
   <data name="&gt;&gt;lblCopyright.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 39</value>
+  <data name="lblAboutMadeby.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;pnlAbout.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -675,6 +675,9 @@
   <data name="&gt;&gt;lblAboutDesignedby.Name" xml:space="preserve">
     <value>lblAboutDesignedby</value>
   </data>
+  <data name="lblAboutLynxara.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="lblAboutDesignedby.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -712,9 +715,6 @@ Be advised, it may have critical bugs</value>
   <data name="&gt;&gt;lblAboutMadeby.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cbLanguage.Parent" xml:space="preserve">
-    <value>pnlHeader</value>
-  </data>
   <data name="lblCopyright.Text" xml:space="preserve">
     <value>v1.1.3
 Made by LynxarADev</value>
@@ -731,8 +731,8 @@ Made by LynxarADev</value>
   <data name="&gt;&gt;lblAboutOpurojo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblAboutLynxara.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="lblHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 39</value>
   </data>
   <data name="&gt;&gt;pnlPage.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -749,8 +749,8 @@ Made by LynxarADev</value>
   <data name="&gt;&gt;cbLanguage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lblHeaderDiscl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 26</value>
+  <data name="pbAboutLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
   <data name="cbLanguage.Items" xml:space="preserve">
     <value>EN</value>
@@ -758,14 +758,14 @@ Made by LynxarADev</value>
   <data name="lblAboutDesignedby.Size" type="System.Drawing.Size, System.Drawing">
     <value>330, 33</value>
   </data>
-  <data name="&gt;&gt;cbLanguage.Name" xml:space="preserve">
-    <value>cbLanguage</value>
+  <data name="lblAboutLink.Text" xml:space="preserve">
+    <value>https://github.com/LynxarA-Coding/Fluent-Launcher</value>
   </data>
   <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
     <value>btnClose</value>
   </data>
-  <data name="&gt;&gt;lblAboutLink.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="lblHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 24pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;pnlPage.Parent" xml:space="preserve">
     <value>$this</value>
@@ -790,8 +790,5 @@ Made by LynxarADev</value>
   </metadata>
   <metadata name="elpsMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ru-RU</value>
   </metadata>
 </root>

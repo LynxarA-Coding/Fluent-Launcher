@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33513.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent Launcher", "Fluent Launcher\Fluent Launcher.csproj", "{A673EF13-ACF9-4C26-842E-EBC92506581B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fluent Launcher Tests", "Fluent Launcher Tests\Fluent Launcher Tests.csproj", "{0ED99629-AB73-4F22-A060-59FF637FD7D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fluent Launcher Tests", "Fluent Launcher Tests\Fluent Launcher Tests.csproj", "{0ED99629-AB73-4F22-A060-59FF637FD7D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
