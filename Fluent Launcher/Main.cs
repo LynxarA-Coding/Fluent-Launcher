@@ -35,7 +35,7 @@ namespace Fluent_Launcher
         [ MAIN METHOD ]
         */
 
-        private readonly string appVersion = "v1.1.3"; // Current App version
+        private readonly string appVersion = "v1.1.4"; // Current App version
         private void Main_Load(object sender, EventArgs e)
         {
             if (!_setup.VersionCheck(appVersion))

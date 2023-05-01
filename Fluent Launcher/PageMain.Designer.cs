@@ -40,25 +40,26 @@
             this.btnUninstallYes = new Guna.UI2.WinForms.Guna2TileButton();
             this.lblUninstallPrompt = new System.Windows.Forms.Label();
             this.lblUninstallDisclaimer = new System.Windows.Forms.Label();
+            this.cbShadow = new Guna.UI2.WinForms.Guna2CheckBox();
             this.pnlButtons.SuspendLayout();
             this.pnlUninstallPrompt.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlButtons
             // 
-            resources.ApplyResources(this.pnlButtons, "pnlButtons");
             this.pnlButtons.Controls.Add(this.btnInstall);
             this.pnlButtons.Controls.Add(this.btnSettings);
             this.pnlButtons.Controls.Add(this.btnUninstall);
+            resources.ApplyResources(this.pnlButtons, "pnlButtons");
             this.pnlButtons.Name = "pnlButtons";
             // 
             // btnInstall
             // 
-            resources.ApplyResources(this.btnInstall, "btnInstall");
             this.btnInstall.BorderRadius = 15;
             this.btnInstall.CheckedState.Parent = this.btnInstall;
             this.btnInstall.CustomImages.Parent = this.btnInstall;
             this.btnInstall.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            resources.ApplyResources(this.btnInstall, "btnInstall");
             this.btnInstall.ForeColor = System.Drawing.Color.White;
             this.btnInstall.HoverState.Parent = this.btnInstall;
             this.btnInstall.Name = "btnInstall";
@@ -67,11 +68,11 @@
             // 
             // btnSettings
             // 
-            resources.ApplyResources(this.btnSettings, "btnSettings");
             this.btnSettings.BorderRadius = 15;
             this.btnSettings.CheckedState.Parent = this.btnSettings;
             this.btnSettings.CustomImages.Parent = this.btnSettings;
             this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            resources.ApplyResources(this.btnSettings, "btnSettings");
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.HoverState.Parent = this.btnSettings;
             this.btnSettings.Image = global::Fluent_Launcher.Properties.Resources.fluent_settings;
@@ -82,11 +83,11 @@
             // 
             // btnUninstall
             // 
-            resources.ApplyResources(this.btnUninstall, "btnUninstall");
             this.btnUninstall.BorderRadius = 15;
             this.btnUninstall.CheckedState.Parent = this.btnUninstall;
             this.btnUninstall.CustomImages.Parent = this.btnUninstall;
             this.btnUninstall.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            resources.ApplyResources(this.btnUninstall, "btnUninstall");
             this.btnUninstall.ForeColor = System.Drawing.Color.White;
             this.btnUninstall.HoverState.Parent = this.btnUninstall;
             this.btnUninstall.Name = "btnUninstall";
@@ -95,13 +96,13 @@
             // 
             // btnFolderSelect
             // 
-            resources.ApplyResources(this.btnFolderSelect, "btnFolderSelect");
             this.btnFolderSelect.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.btnFolderSelect.BorderRadius = 6;
             this.btnFolderSelect.BorderThickness = 1;
             this.btnFolderSelect.CheckedState.Parent = this.btnFolderSelect;
             this.btnFolderSelect.CustomImages.Parent = this.btnFolderSelect;
             this.btnFolderSelect.FillColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnFolderSelect, "btnFolderSelect");
             this.btnFolderSelect.ForeColor = System.Drawing.Color.Black;
             this.btnFolderSelect.HoverState.Parent = this.btnFolderSelect;
             this.btnFolderSelect.Name = "btnFolderSelect";
@@ -110,7 +111,6 @@
             // 
             // tbFolder
             // 
-            resources.ApplyResources(this.tbFolder, "tbFolder");
             this.tbFolder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
             this.tbFolder.BorderRadius = 6;
             this.tbFolder.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -125,6 +125,7 @@
             this.tbFolder.ForeColor = System.Drawing.Color.Black;
             this.tbFolder.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFolder.HoverState.Parent = this.tbFolder;
+            resources.ApplyResources(this.tbFolder, "tbFolder");
             this.tbFolder.Name = "tbFolder";
             this.tbFolder.PasswordChar = '\0';
             this.tbFolder.PlaceholderText = "STEAM FOLDER";
@@ -134,23 +135,23 @@
             // 
             // pnlUninstallPrompt
             // 
-            resources.ApplyResources(this.pnlUninstallPrompt, "pnlUninstallPrompt");
             this.pnlUninstallPrompt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.pnlUninstallPrompt.BorderRadius = 15;
             this.pnlUninstallPrompt.BorderThickness = 2;
             this.pnlUninstallPrompt.Controls.Add(this.btnUninstallNo);
             this.pnlUninstallPrompt.Controls.Add(this.btnUninstallYes);
             this.pnlUninstallPrompt.Controls.Add(this.lblUninstallPrompt);
+            resources.ApplyResources(this.pnlUninstallPrompt, "pnlUninstallPrompt");
             this.pnlUninstallPrompt.Name = "pnlUninstallPrompt";
             this.pnlUninstallPrompt.ShadowDecoration.Parent = this.pnlUninstallPrompt;
             // 
             // btnUninstallNo
             // 
-            resources.ApplyResources(this.btnUninstallNo, "btnUninstallNo");
             this.btnUninstallNo.BorderRadius = 15;
             this.btnUninstallNo.CheckedState.Parent = this.btnUninstallNo;
             this.btnUninstallNo.CustomImages.Parent = this.btnUninstallNo;
             this.btnUninstallNo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            resources.ApplyResources(this.btnUninstallNo, "btnUninstallNo");
             this.btnUninstallNo.ForeColor = System.Drawing.Color.White;
             this.btnUninstallNo.HoverState.Parent = this.btnUninstallNo;
             this.btnUninstallNo.Name = "btnUninstallNo";
@@ -159,11 +160,11 @@
             // 
             // btnUninstallYes
             // 
-            resources.ApplyResources(this.btnUninstallYes, "btnUninstallYes");
             this.btnUninstallYes.BorderRadius = 15;
             this.btnUninstallYes.CheckedState.Parent = this.btnUninstallYes;
             this.btnUninstallYes.CustomImages.Parent = this.btnUninstallYes;
             this.btnUninstallYes.FillColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.btnUninstallYes, "btnUninstallYes");
             this.btnUninstallYes.ForeColor = System.Drawing.Color.White;
             this.btnUninstallYes.HoverState.Parent = this.btnUninstallYes;
             this.btnUninstallYes.Name = "btnUninstallYes";
@@ -183,11 +184,28 @@
             this.lblUninstallDisclaimer.Name = "lblUninstallDisclaimer";
             this.lblUninstallDisclaimer.Click += new System.EventHandler(this.lblUninstallDisclaimer_Click);
             // 
+            // cbShadow
+            // 
+            resources.ApplyResources(this.cbShadow, "cbShadow");
+            this.cbShadow.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbShadow.CheckedState.BorderRadius = 2;
+            this.cbShadow.CheckedState.BorderThickness = 0;
+            this.cbShadow.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(93)))), ((int)(((byte)(241)))));
+            this.cbShadow.ForeColor = System.Drawing.Color.White;
+            this.cbShadow.Name = "cbShadow";
+            this.cbShadow.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.cbShadow.UncheckedState.BorderRadius = 2;
+            this.cbShadow.UncheckedState.BorderThickness = 0;
+            this.cbShadow.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.cbShadow.UseVisualStyleBackColor = true;
+            this.cbShadow.CheckedChanged += new System.EventHandler(this.cbShadow_CheckedChanged);
+            // 
             // PageMain
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.cbShadow);
             this.Controls.Add(this.lblUninstallDisclaimer);
             this.Controls.Add(this.pnlUninstallPrompt);
             this.Controls.Add(this.btnFolderSelect);
@@ -217,5 +235,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btnUninstallYes;
         private System.Windows.Forms.Label lblUninstallPrompt;
         private System.Windows.Forms.Label lblUninstallDisclaimer;
+        private Guna.UI2.WinForms.Guna2CheckBox cbShadow;
     }
 }

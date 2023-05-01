@@ -151,7 +151,7 @@ Soyez averti, il peut y avoir des bugs</value>
     <value>115, 30</value>
   </data>
   <data name="lblCopyright.Text" xml:space="preserve">
-    <value>v1.1.3
+    <value>v1.1.4
 Fait par LynxarADev</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

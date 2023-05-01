@@ -22,6 +22,7 @@ namespace Fluent_Launcher
         private bool _isSteamFolderValid; // true if Steam folder is valid, false if not
         private string versionName; // Version name of the skin to use in directory path
         private Setup _setup = new Setup(); // Setup class instance
+        private Localization _localization = new Localization(); // Localization class instance
 
         /*
         [ MAIN METHOD ]
@@ -76,6 +77,7 @@ namespace Fluent_Launcher
             lblUninstallPrompt.Location = new Point((pnlUninstallPrompt.Width - lblUninstallPrompt.Width) / 2, lblUninstallPrompt.Location.Y);
             btnUninstallYes.Text = resources.GetString("btnUninstallYes.Text", culture);
             btnUninstallNo.Text = resources.GetString("btnUninstallNo.Text", culture);
+            cbShadow.Location = new Point((this.Width - cbShadow.Width) / 2, cbShadow.Location.Y);
         }
 
         /*
@@ -116,15 +118,12 @@ namespace Fluent_Launcher
         {
             Main main = (Main)this.Owner;
             CultureInfo culture = main._currentCulture;
-            // Initializing component and resources
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageMain));
-            resources.ApplyResources(this, "$this", culture);
 
             // If Steam folder is not valid, show error message and stop installation
             if (!_isSteamFolderValid)
             {
                 // Show localized error
-                MessageBox.Show(resources.GetString("FolderNotValid", culture), resources.GetString("ErrorTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(_localization.Localized["FolderNotValid"][culture.ToString()], _localization.Localized["ErrorTitle"][culture.ToString()], MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }
@@ -132,7 +131,7 @@ namespace Fluent_Launcher
             // If prequisites are not met, show error message and stop installation
             if (!_setup.PrequisitesCheck())
             {
-                MessageBox.Show(resources.GetString("NotEnoughFiles", culture), resources.GetString("ErrorTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(_localization.Localized["NotEnoughFiles"][culture.ToString()], _localization.Localized["ErrorTitle"][culture.ToString()], MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }
@@ -154,89 +153,98 @@ namespace Fluent_Launcher
             // Start installation
             Installation installation = new Installation();
 
-            // Copy main files
-            installation.Main($"{mainDir}/Files/Main/{versionName}", $"{tbFolder.Text}/skins", versionName);
+            // If Shadow patch is selected
+            if (cbShadow.Checked)
+            {
+                // Copy patch files
+                installation.Install($"{mainDir}/Files/Shadow", $"{tbFolder.Text}/");
+            }
+            else
+            {
+                // Copy main files
+                installation.Main($"{mainDir}/Files/Main/{versionName}", $"{tbFolder.Text}/skins", versionName);
 
-            // Button Option check
-            if (main._installOptionsState["AccountButton:Default"])
-            {
-                // Install default button
-                installation.Install($"{mainDir}/Files/Options/Account Button Extra/1", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            else if (main._installOptionsState["AccountButton:Username"])
-            {
-                // Install username button
-                installation.Install($"{mainDir}/Files/Options/Account Button Extra/2", $"{tbFolder.Text}/skins/{versionName}");
-            }
+                // Button Option check
+                if (main._installOptionsState["AccountButton:Default"])
+                {
+                    // Install default button
+                    installation.Install($"{mainDir}/Files/Options/Account Button Extra/1", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                else if (main._installOptionsState["AccountButton:Username"])
+                {
+                    // Install username button
+                    installation.Install($"{mainDir}/Files/Options/Account Button Extra/2", $"{tbFolder.Text}/skins/{versionName}");
+                }
 
-            // Layout option check
-            if (main._installOptionsState["Layout:Compact"])
-            {
-                // install Compact
-                installation.Install($"{mainDir}/Files/Options/Client Layouts/Compact", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            else if (main._installOptionsState["Layout:Essentials"])
-            {
-                // install Essentials
-                installation.Install($"{mainDir}/Files/Options/Client Layouts/Essentials", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            else if (main._installOptionsState["Layout:Essentials Alternative"])
-            {
-                // install Essentials Alternative
-                installation.Install($"{mainDir}/Files/Options/Client Layouts/Essentials Alternative", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            if (main._installOptionsState["Layout:Sidebar"])
-            {
-                // install Sidebar
-                installation.Install($"{mainDir}/Files/Options/Client Layouts/Sidebar", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            else if (main._installOptionsState["Layout:Sidebar Text"])
-            {
-                // Install Sidebar + Text
-                installation.Install($"{mainDir}/Files/Options/Client Layouts/Sidebar Text", $"{tbFolder.Text}/skins/{versionName}");
-            }
+                // Layout option check
+                if (main._installOptionsState["Layout:Compact"])
+                {
+                    // install Compact
+                    installation.Install($"{mainDir}/Files/Options/Client Layouts/Compact", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                else if (main._installOptionsState["Layout:Essentials"])
+                {
+                    // install Essentials
+                    installation.Install($"{mainDir}/Files/Options/Client Layouts/Essentials", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                else if (main._installOptionsState["Layout:Essentials Alternative"])
+                {
+                    // install Essentials Alternative
+                    installation.Install($"{mainDir}/Files/Options/Client Layouts/Essentials Alternative", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                if (main._installOptionsState["Layout:Sidebar"])
+                {
+                    // install Sidebar
+                    installation.Install($"{mainDir}/Files/Options/Client Layouts/Sidebar", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                else if (main._installOptionsState["Layout:Sidebar Text"])
+                {
+                    // Install Sidebar + Text
+                    installation.Install($"{mainDir}/Files/Options/Client Layouts/Sidebar Text", $"{tbFolder.Text}/skins/{versionName}");
+                }
 
-            // Overlay option check
-            if (main._installOptionsState["CustomOverlay:Default"])
-            {
-                // install Default Overlay
-                installation.Install($"{mainDir}/Files/Options/Overlay Options/Default", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            else if (main._installOptionsState["CustomOverlay:Bottom"])
-            {
-                // install Bottom Overlay
-                installation.Install($"{mainDir}/Files/Options/Overlay Options/Bottom", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            else if (main._installOptionsState["CustomOverlay:Left Align"])
-            {
-                // install Left Align Overlay
-                installation.Install($"{mainDir}/Files/Options/Overlay Options/Left Align", $"{tbFolder.Text}/skins/{versionName}");
-            }
-            else if (main._installOptionsState["CustomOverlay:Left Bar"])
-            {
-                // install Left Bar Overlay
-                installation.Install($"{mainDir}/Files/Options/Overlay Options/Left Bar", $"{tbFolder.Text}/skins/{versionName}");
-            }
+                // Overlay option check
+                if (main._installOptionsState["CustomOverlay:Default"])
+                {
+                    // install Default Overlay
+                    installation.Install($"{mainDir}/Files/Options/Overlay Options/Default", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                else if (main._installOptionsState["CustomOverlay:Bottom"])
+                {
+                    // install Bottom Overlay
+                    installation.Install($"{mainDir}/Files/Options/Overlay Options/Bottom", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                else if (main._installOptionsState["CustomOverlay:Left Align"])
+                {
+                    // install Left Align Overlay
+                    installation.Install($"{mainDir}/Files/Options/Overlay Options/Left Align", $"{tbFolder.Text}/skins/{versionName}");
+                }
+                else if (main._installOptionsState["CustomOverlay:Left Bar"])
+                {
+                    // install Left Bar Overlay
+                    installation.Install($"{mainDir}/Files/Options/Overlay Options/Left Bar", $"{tbFolder.Text}/skins/{versionName}");
+                }
 
-            // Extra options check
-            // Dark Library option
-            if (main._installOptionsState["Extra:Dark Library"])
-            {
-                // install Extra Library
-                installation.Install($"{mainDir}/Files/Options/Extra/Library", $"{tbFolder.Text}/steamui");
-            }
-            // Dark Friends option
-            if (main._installOptionsState["Extra:Dark Friends List"])
-            {
-                // install Extra Friends
-                installation.Install($"{mainDir}/Files/Options/Extra/Friends", $"{tbFolder.Text}/clientui");
+                // Extra options check
+                // Dark Library option
+                if (main._installOptionsState["Extra:Dark Library"])
+                {
+                    // install Extra Library
+                    installation.Install($"{mainDir}/Files/Options/Extra/Library", $"{tbFolder.Text}/steamui");
+                }
+                // Dark Friends option
+                if (main._installOptionsState["Extra:Dark Friends List"])
+                {
+                    // install Extra Friends
+                    installation.Install($"{mainDir}/Files/Options/Extra/Friends", $"{tbFolder.Text}/clientui");
+                }
             }
 
             // Enable install button back
             btnInstall.Enabled = true;
 
             // Show success message
-            MessageBox.Show(resources.GetString("SuccessInstalled", culture), resources.GetString("SuccessTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(_localization.Localized["SuccessInstalled"][culture.ToString()], _localization.Localized["SuccessTitle"][culture.ToString()], MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Uninstall button click event
@@ -244,15 +252,12 @@ namespace Fluent_Launcher
         {
             Main main = (Main)this.Owner;
             CultureInfo culture = main._currentCulture;
-            // Initializing component and resources
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageMain));
-            resources.ApplyResources(this, "$this", culture);
 
             // If Steam folder is not valid, show error message and stop uninstall process
             if (!_isSteamFolderValid)
             {
                 // Show localized error
-                MessageBox.Show(resources.GetString("FolderNotValid", culture), resources.GetString("ErrorTitle", culture), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(_localization.Localized["FolderNotValid"][culture.ToString()], _localization.Localized["ErrorTitle"][culture.ToString()], MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }
@@ -273,29 +278,43 @@ namespace Fluent_Launcher
             // get version name
             string mainDir = Path.GetDirectoryName(Application.ExecutablePath);
             versionName = Directory.GetDirectories($"{mainDir}/Files/Main")[0].Split('\\').Last();
-
-            // uninstall everything from the skin folder
             Installation installation = new Installation();
-            installation.Uninstall($"{tbFolder.Text}/skins/{versionName}");
 
-            // If SFP is installed, uninstalling dark friends list and library
-            if (main._isPatched)
+            if (cbShadow.Checked)
             {
-                // Uninstall dark library if exist
+                // uninstall Shadow Patch
                 installation.Uninstall($"{tbFolder.Text}/steamui");
-
-                // Uninstall dark friends list if exist
-                installation.UninstallFile($"{tbFolder.Text}/clientui/", "friends.custom.css");
-                installation.UninstallFile($"{tbFolder.Text}/clientui/", "ofriends.custom.css");
-
-                // Notify the user that skin is uninstalled
-                MessageBox.Show(resources.GetString("SuccessDeletedSFP", culture), resources.GetString("SuccessTitle"),
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                installation.UninstallFile($"{tbFolder.Text}/", "libcrypto-3.dll");
+                installation.UninstallFile($"{tbFolder.Text}/", "libcurl.dll");
+                installation.UninstallFile($"{tbFolder.Text}/", "User32.dll");
+                installation.UninstallFile($"{tbFolder.Text}/", "User32.dll");
+                installation.UninstallFile($"{tbFolder.Text}/", "zlib1.dll");
             }
             else
             {
+                // uninstall everything from the skin folder
+                installation.Uninstall($"{tbFolder.Text}/skins/{versionName}");
+
+                // If SFP is installed, uninstalling dark friends list and library
+                if (main._isPatched)
+                {
+                    // Uninstall dark library if exist
+                    installation.Uninstall($"{tbFolder.Text}/steamui");
+
+                    // Uninstall dark friends list if exist
+                    installation.UninstallFile($"{tbFolder.Text}/clientui/", "friends.custom.css");
+                    installation.UninstallFile($"{tbFolder.Text}/clientui/", "ofriends.custom.css");
+
+                    // Notify the user that skin is uninstalled
+                    MessageBox.Show(_localization.Localized["SuccessDeletedSFP"][culture.ToString()], _localization.Localized["SuccessTitle"][culture.ToString()],
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            if (!main._isPatched)
+            {
                 // Notify the user that skin is uninstalled
-                MessageBox.Show(resources.GetString("SuccessDeleted", culture), resources.GetString("SuccessTitle"),
+                MessageBox.Show(_localization.Localized["SuccessDeleted"][culture.ToString()], _localization.Localized["SuccessTitle"][culture.ToString()],
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -379,11 +398,56 @@ namespace Fluent_Launcher
             Main main = (Main)this.Owner;
             // Show localized message
             CultureInfo culture = main._currentCulture;
-            // Initializing component and resources
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(PageMain));
-            resources.ApplyResources(this, "$this", culture);
 
-            MessageBox.Show($"{resources.GetString("UninstallPrompt", culture)}", lblUninstallDisclaimer.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(_localization.Localized["UninstallPrompt"][culture.ToString()], lblUninstallDisclaimer.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void cbShadow_CheckedChanged(object sender, EventArgs e)
+        {
+            Main main = (Main)this.Owner;
+            // Show localized message
+            CultureInfo culture = main._currentCulture;
+
+            // If checked, show prompt
+            if (cbShadow.Checked)
+            {
+                DialogResult result = MessageBox.Show(_localization.Localized["ShadowPrompt"][culture.ToString()], "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.No)
+                {
+                    cbShadow.Checked = false;
+                }
+                else
+                {
+                    // Show File Selection
+                    FileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "*.exe|*.exe";
+                    openFileDialog.Title = "Select Steam Shortcut";
+                    openFileDialog.ShowDialog();
+
+                    if (openFileDialog.FileName != "")
+                    {
+                        // Get the path to the selected file.
+                        string exePath = openFileDialog.FileName;
+
+                        // Create a WshShell object.
+                        IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
+
+                        // Get the shortcut file path.
+                        string shortcutPath = Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory),
+                            Path.GetFileNameWithoutExtension(exePath) + ".lnk");
+
+                        // Get the shortcut object.
+                        IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(shortcutPath);
+
+                        // Modify the launch arguments for the shortcut.
+                        shortcut.Arguments = "-cef-enable-debugging";
+
+                        // Save the changes to the shortcut file.
+                        shortcut.Save();
+                    }
+                }
+            }
         }
     }
 }

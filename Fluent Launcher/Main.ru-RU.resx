@@ -138,45 +138,6 @@
   <data name="btnClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="pbAboutLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutOpurojo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAboutClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutLynxara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutDesignedby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutDesignedby.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 134</value>
-  </data>
-  <data name="lblAboutDesignedby.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 33</value>
-  </data>
-  <data name="lblAboutDesignedby.Text" xml:space="preserve">
-    <value>Fluent for Steam является дизайном:</value>
-  </data>
-  <data name="lblAboutMadeby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAboutMadeby.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 4</value>
-  </data>
-  <data name="lblAboutMadeby.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 33</value>
-  </data>
-  <data name="lblAboutMadeby.Text" xml:space="preserve">
-    <value>Проект поддерживается:</value>
-  </data>
   <data name="pnlAbout.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 432</value>
   </data>
@@ -190,7 +151,7 @@
     <value>144, 30</value>
   </data>
   <data name="lblCopyright.Text" xml:space="preserve">
-    <value>v1.1.3
+    <value>v1.1.4
 Разработчик LynxarADev</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -372,5 +333,44 @@
         gUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoGYcvg/KWhi/ndd
         Y5gAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="pbAboutLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutOpurojo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAboutClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutLynxara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutDesignedby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutDesignedby.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 134</value>
+  </data>
+  <data name="lblAboutDesignedby.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 33</value>
+  </data>
+  <data name="lblAboutDesignedby.Text" xml:space="preserve">
+    <value>Fluent for Steam является дизайном:</value>
+  </data>
+  <data name="lblAboutMadeby.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAboutMadeby.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 4</value>
+  </data>
+  <data name="lblAboutMadeby.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 33</value>
+  </data>
+  <data name="lblAboutMadeby.Text" xml:space="preserve">
+    <value>Проект поддерживается:</value>
   </data>
 </root>

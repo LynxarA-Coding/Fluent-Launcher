@@ -201,6 +201,7 @@
   <ItemGroup>
     <Compile Include="BackgroundClasses\Installation.cs" />
     <Compile Include="BackgroundClasses\Setup.cs" />
+    <Compile Include="Localization.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +293,17 @@
     <Content Include="fleuntuserdiscord.ico" />
     <None Include="Resources\fluent_settings.png" />
     <None Include="Resources\fleuntuserdiscord_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.5.5\build\Fody.targets" Condition="Exists('..\packages\Fody.6.5.5\build\Fody.targets')" />

@@ -48,6 +48,12 @@ namespace Fluent_Launcher.BackgroundClasses
             {
                 return false;
             }
+            
+            // Check if Shadow patch exists
+            if (!Directory.Exists($"Files/Shadow"))
+            {
+                return false;
+            }
 
             // check if folder has directories in it
             if (Directory.GetDirectories("Files").Length == 0)

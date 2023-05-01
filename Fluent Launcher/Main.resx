@@ -221,8 +221,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
-  <data name="lblCopyright.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 416</value>
+  <data name="lblAboutLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblHeader.Text" xml:space="preserve">
     <value>FLUENT LAUNCHER</value>
@@ -305,6 +305,9 @@
   </data>
   <data name="lblAboutLynxara.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 45</value>
+  </data>
+  <data name="lblAboutMadeby.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;pnlAbout.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -419,6 +422,9 @@
   </data>
   <data name="pnlPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 80</value>
+  </data>
+  <data name="lblCopyright.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 416</value>
   </data>
   <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
     <value>pbLogo</value>
@@ -630,8 +636,8 @@
   <data name="&gt;&gt;lblCopyright.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblAboutMadeby.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="lblHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 39</value>
   </data>
   <data name="&gt;&gt;pnlAbout.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -675,14 +681,8 @@
   <data name="&gt;&gt;lblAboutDesignedby.Name" xml:space="preserve">
     <value>lblAboutDesignedby</value>
   </data>
-  <data name="lblAboutLynxara.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="lblAboutDesignedby.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="lblAboutLink.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="lblAboutMadeby.Text" xml:space="preserve">
     <value>This project is made by</value>
@@ -716,7 +716,7 @@ Be advised, it may have critical bugs</value>
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblCopyright.Text" xml:space="preserve">
-    <value>v1.1.3
+    <value>v1.1.4
 Made by LynxarADev</value>
   </data>
   <data name="lblAboutLink.Location" type="System.Drawing.Point, System.Drawing">
@@ -731,8 +731,8 @@ Made by LynxarADev</value>
   <data name="&gt;&gt;lblAboutOpurojo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 39</value>
+  <data name="lblAboutLynxara.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;pnlPage.ZOrder" xml:space="preserve">
     <value>3</value>
