@@ -4,7 +4,7 @@
 [![VirusTotal](https://img.shields.io/badge/VirusTotal-11%2F70-green)](https://www.virustotal.com/gui/file/c714016de43108ea311f2909eed8dba85f5fa43dfaaeed9e0947fa3aa30abc16/detection)
 [![Download](https://img.shields.io/badge/Download-click%20here-green)](https://github.com/LynxarA-Coding/Fluent-Launcher/releases/tag/v1.1.3) <br> <br>
 ---
-# IF YOU ARE ON STEAM BETA, IT WILL NOT WORK! DISABLE BETA OR WAIT FOR AN UPDATE (THIS MESSAGE WILL BE DELETED AFTER FLUENT FOR STEAM UPDATE)
+# IF YOU ARE ON STEAM BETA, IT WILL WORK TOO! USE SHADOWMONSTER PATCH INSIDE AN APP
 ---
 # FOR INSTALLATION/USAGE GUIDE CLICK [HERE](https://github.com/LynxarA-Coding/Fluent-Launcher/wiki)
 # ДЛЯ ГАЙДА ПО УСТАНОВКЕ/ПОЛЬЗОВАНИЮ НАЖМИТЕ [СЮДА](https://github.com/LynxarA-Coding/Fluent-Launcher/wiki)
@@ -23,6 +23,7 @@ It will definitely motivate me to do more coding in my free time. Don't worry, t
 | Fluent for Steam Website  | https://www.fluentforsteam.io/  |
 | Fluent for Steam Patreon  | https://www.patreon.com/FluentForSteam  |
 | Steam Friends Patcher | https://github.com/PhantomGamers/SFP |
+| ShadowMonster Patch (Millenium Steam) | https://github.com/ShadowMonster99/millennium-steam-patcher |
 
 ## Contributions:
 **French Localization** made by **Daisuke#3667** <br>
